@@ -42,3 +42,16 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+
+// When the user scrolls the page, execute myFunction
+// document.getElementsByClassName("container").addEventListener("scroll", myFunction);
+
+function myFunction() {
+  const winScroll = document.getElementById("container").scrollTop;
+  const height = document.getElementById("container").scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+document.getElementById("container").onscroll = function() {myFunction()};

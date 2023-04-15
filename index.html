@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/png" href="img/icon.png">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+        <script src="https://kit.fontawesome.com/2123d2478d.js" crossorigin="anonymous"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script>
     </head>
@@ -17,32 +18,54 @@
             <p class="hide">Notes and reflections in understanding image processing fundamentals.</p>
         </div> -->
         
-        <div class="header collapsible">📷 Introduction to Image Processing</div>
+        <div class="header collapsible"><i class="fa-solid fa-camera" style="color: #ffffff; padding-right:20px;"></i> Introduction to Image Processing</div>
             <div class="content">
                 <p>Notes and reflections in understanding image processing fundamentals.</p>
             </div>
             
         <div class="body">
             <div class="tab">
-                <div>
-                    <button class="tablinks" onclick="openTab(event, '1-2')" id="defaultOpen">🏞 Intro to the Digital Image</button>
-                    <button class="tablinks" onclick="openTab(event, '3-4')">🌟 Image Enhancement</button>
-                    <button class="tablinks" onclick="openTab(event, '5-6')">✂️ Image Extraction</button>
-                    <button class="tablinks" onclick="openTab(event, '7-8')">🔍 Image Recognition</button>
-                    <button class="tablinks" onclick="openTab(event, '9-10')">9-10</button>
-                    <button class="tablinks" onclick="openTab(event, '11-12')">11-12</button>
-                    <button class="tablinks" onclick="openTab(event, '13-14')">13-14</button>
-                    <button class="tablinks" onclick="openTab(event, '15-16')">15-16</button>
-                    <button class="tablinks" onclick="openTab(event, '17-18')">17-18</button>
-                </div>
+                    <button class="tablinks" onclick="openTab(event, '1-2')" id="defaultOpen">
+                        <i class="fa-solid fa-image"></i>
+                        <p><i class="fa-solid fa-image"></i>The Digital Image</p>
+                    </button>
+                    <button class="tablinks" onclick="openTab(event, '3-4')">
+                        <i class="fa-solid fa-star"></i>
+                        <p><i class="fa-solid fa-star"></i>Image Enhancement</p>
+                    </button>
+                    <button class="tablinks" onclick="openTab(event, '5-6')">
+                        <i class="fa-solid fa-scissors"></i>
+                        <p><i class="fa-solid fa-scissors"></i>Image Extraction</p></button>
+                    <button class="tablinks" onclick="openTab(event, '7-8')">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <p><i class="fa-solid fa-magnifying-glass"></i>Image Recognition</p></button>
+                    <button class="tablinks" onclick="openTab(event, '9-10')">
+                        <i class="fa-solid fa-camera"></i>
+                        <p><i class="fa-solid fa-camera"></i>9-10</p></button>
+                    <button class="tablinks" onclick="openTab(event, '11-12')">
+                        <i class="fa-solid fa-camera"></i>
+                        <p><i class="fa-solid fa-camera"></i>11-12</p></button>
+                    <button class="tablinks" onclick="openTab(event, '13-14')">
+                        <i class="fa-solid fa-camera"></i>
+                        <p><i class="fa-solid fa-camera"></i>13-14</p></button>
+                    <button class="tablinks" onclick="openTab(event, '15-16')">
+                        <i class="fa-solid fa-camera"></i>
+                        <p><i class="fa-solid fa-camera"></i>15-16</p></button>
+                    <button class="tablinks" onclick="openTab(event, '17-18')">
+                        <i class="fa-solid fa-camera"></i>
+                        <p><i class="fa-solid fa-camera"></i>17-18</p></button>
             </div>
             
-            <div class="container">
-
+            <div id="container">
+                <div class="progress-container">
+                    <div class="progress-bar" id="myBar"></div>
+                  </div>
                 <div id="1-2" class="tabcontent">
                     <img class="img-container" src="img/1-2_header.jpg">
                     <div class="blog-container">
-                        <div class="subheader"><h3><span class="session">SESSION 1-2</span> 🏞 Introduction to the Digital Image</h3></div>
+                        <div class="subheader">
+                            <h3><span class="session">SESSION 1-2</span> 🏞 Introduction to the Digital Image</h3>
+                        </div>
                         <div class="txt-container">
                             <p>London is the capital city of England. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt dictum felis, ut accumsan lacus aliquam sit amet. Maecenas finibus, sem nec rhoncus rutrum, ante tellus molestie dolor, id tristique massa mi et ante. Vivamus tellus dui, viverra et nunc quis, auctor ullamcorper velit. Pellentesque at turpis a diam eleifend suscipit. Curabitur id massa ut felis vulputate consequat sit amet eu ipsum. Vivamus pretium est et egestas sollicitudin. Praesent eleifend non nisl a elementum. Nullam laoreet elementum purus eget gravida. Nam tincidunt suscipit est, a dignissim lacus gravida vel. Curabitur maximus velit eget consectetur viverra. Maecenas posuere sem at fermentum eleifend. Sed finibus fringilla odio at ultricies.
                                 Aenean erat sem, luctus sollicitudin volutpat in, tincidunt eget massa. Nullam tempus ligula id elit vulputate laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit lacinia eros, sed molestie dui faucibus in. Aenean id ex rutrum eros ullamcorper consequat ut ut tortor. Nulla nec bibendum nulla, sed molestie arcu. Fusce auctor ipsum id sodales luctus. Aliquam tincidunt ac nisi et malesuada. Proin condimentum nulla at tellus volutpat consectetur. Quisque faucibus nibh id metus accumsan hendrerit. Quisque finibus turpis luctus dui cursus, eleifend viverra ligula imperdiet.

@@ -36,15 +36,13 @@ h3 {
 .header {
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content:flex-start;
     padding: 0 16px;
     height: 60px;
     background: rgb(30, 30, 30);
     color: white;
-    /* position: fixed;c */
     top: 0;
     z-index: 10;
-    min-width: 1000px;
   }
 
 .subheader {
@@ -57,7 +55,7 @@ h3 {
     background: white;
     color: black;
     position: sticky;
-    top: 0;
+    top: 8px;
     border-bottom: 1px dotted black;
     z-index: 1;
   }
@@ -76,9 +74,14 @@ h3 {
     display: flex;
   }
 
-.container {
+  .tab p {
+    margin-block-end: 0;
+    margin-block-start: 0;
+  }
+
+#container {
     /* padding: 32px; */
-    min-width: 700px;
+    /* min-width: 500px; */
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -109,13 +112,15 @@ h3 {
 
 .txt-container {
     padding: 0px 50px;
+    text-align: justify;
 }
 
 .gallery-container {
     display: flex;
     flex-direction:row;
     flex-wrap:wrap;
-    max-width: 100%;
+    width:100%;
+    /* max-width: 100%; */
     justify-content: center;
     align-items: center;
     padding: 30px 0;
@@ -123,7 +128,9 @@ h3 {
 }
 
 .gallery-img {
+    max-width: 100%;
     max-height: 300px;
+
 }
 
 .tab {
@@ -132,10 +139,18 @@ h3 {
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: 100vh;
     /* height: calc(100vh - 60px); */
     /* padding: 16px; */
+}
+
+.tablinks > i {
+  display: none;
+}
+
+.tablinks > p > i {
+  padding-right: 8px;
 }
 
 .tab button {
@@ -152,6 +167,7 @@ h3 {
     font-size: 15px;
     border: 0.01px solid rgb(30, 30, 30);
     border-top: none;
+    border-right: none;
     box-sizing: border-box;
 }
 
@@ -186,14 +202,14 @@ h3 {
     width: 100%;
   }
 
-  .hide {
+  /* .hide {
     display: none;
   }
   
   .myDIV:hover + .hide {
     display: block;
     color: red;
-  }
+  } */
 
   /* Style the button that is used to open and close the collapsible content */
 .collapsible {
@@ -212,16 +228,77 @@ h3 {
   }
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  /* .active, .collapsible:hover {
-    background-color: #ccc;
-  } */
+.collapsible:hover {
+    background-color: rgb(60,60,60);
+  }
   
-  /* Style the collapsible content. Note: hidden by default */
   .content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: orange;
   }
 
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+  position:sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.progress-bar {
+  height: 8px;
+  background: orangered;
+  width: 0%;
+}
+
+@media screen and (max-width: 800px) {
+  .tab {
+    width: 50px; 
+    min-width:50px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 100vh;
+  }
+  .tab button {
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .tab p {
+    display: none;
+  }
+
+  .tab i {
+    display: block;
+  }
+
+  .header {
+    font-size: 3vw;
+
+  }
+
+  .txt-container p {
+    font-size: 12px;
+  }
+
+  .blog-container {
+    padding: 0;
+  }
+
+  .footer {
+    position:relative;
+  }
+
+  code {
+    font-size: 11px
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  h3, .session {
+    font-size: 2.5vw;
+  }
+}
   
