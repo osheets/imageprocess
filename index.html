@@ -7,7 +7,7 @@
         <title>Image Processing</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/png" href="img/icon.png">
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
         <script src="https://kit.fontawesome.com/2123d2478d.js" crossorigin="anonymous"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script>
@@ -150,12 +150,133 @@
                 <div id="3-4" class="tabcontent">
                     <img class="img-container" src="img/3-4_header.jpg">
                     <div class="blog-container">
-                        <div class="subheader"><h3><span class="session">SESSION 3-4</span> 🌟 Image Enhancement </h3></div>
+                        <div class="subheader"><h3><span class="session">SESSION 3-4</span> 🌟 Extensively Cleaning up the Moon </h3></div>
                         <div class="txt-container">
 
                             <p>This section focuses on <b><span style="color:orangered">Enhancement <span style="color:lightgrey">Extraction Recognition</span>  Image Processing Techniques.</span></b></p>
 
-                            <p></p>
+                            <p>Image enhancement is useful for cleaning or augmenting images for personal use or professional use as an input for further analysis in a larger pipeline. Of the many techniques available, the following will be discussed:
+                            </p>
+
+                            <ol>
+                                <li><b>Fourier Transform</b>: Turning an image domain into a frequency domain to remove repeating artifacts.</li>
+                                <li><b>White Balancing</b>: Removing a color overcast to make white portions of an image its natural white, applied to the whole image.</li>
+                                <li><b>Histogram Manipulation</b>: Improving a dark/low contrast/light image to a higher contrast by stretching its values to create a uniformly represented histogram.</li>
+                            </ol>
+
+                            <p>While white balancing and histogram manipulation have immense use, we will be focusing primarily on the Fourier Transform, and how it can be used to manually clean an image.</p>
+
+                            <div class="section">The Fourier Transform</div>
+
+                            <p>Images, like audio, are signals that can be broken into wave pattern superpositions. As such, periodic patterns like stripes and checkered texture artifacts can be removed by simply converting the image to frequencies, dulling the strongest frequencies, then converting it back to its original image format.
+                            </p>
+
+                            <p>This is an example of an image of diagonal stripes represented in a frequency domain:</p>
+
+                            <div class="gallery-container">
+                                <img class="gallery-img" src="img/3-4_sample.png">
+                            </div>
+
+                            <p>What are the 3 dots? The 2 outer dots represent the repeating pattern of the stripes at the angle of the diagonal. The middle dot is the DC component corresponding to the total luminosity of the image. In a frequency plot, a dot can mark the dominating wavelength that prevails over other smaller wavelengths. In this case, this would be the periodic pattern of the diagonal. The plot will follow the direction/s of the pattern.</p>
+
+                            <div class="section">Cleaning up the Moon</div>
+
+                            <p>How about an image of a moon? Below is an example of an old moon image with scanline artifacts. We can see that the frequency plot here is noisier, because there's much more going on in this image than a striped pattern. But even still, a prevailing cross shape stands out.</p>
+
+                            <pre>
+                                <code class="language-python">
+import numpy as np
+import matplotlib.pyplot as plt
+from skimage.io import imread, imshow
+from skimage.color import rgb2gray
+
+orbiter = rgb2gray(imread('lunar_orbiter.jpg'))
+orbiter_fft = np.fft.fftshift(np.fft.fft2(orbiter))
+
+fig, ax = plt.subplots(1, 3, gridspec_kw=dict(width_ratios=[16,16,1]),figsize=(16,8))
+img = ax[0].imshow(orbiter, cmap='gray')
+ax[1].imshow(np.log(abs(orbiter_fft)), cmap='gray')
+fig.colorbar(img, cax=ax[2]);
+
+                                </code>
+                            </pre>
+
+                            <div class="gallery-container">
+                                <img class="gallery-img" src="img/3-4_moon_b.png">
+                            </div>
+
+                            <p>Given what we know in the diagonal stripe example, what part of the cross represents the horizontal scan lines?</p>
+                                
+                            <p>The <b>vertical</b> part of the cross. Going along the y-axis of this image is where the oscillating pattern emerges. In order to remove this, we set the values along this line to a low number like 1 -- we skip the center, because that's the DC component. Removing it would leave only the textures of the image (which is useful sometimes!) but for us, we just want a normal picture of the moon crater.</p>
+
+                            <pre>
+                                <code class="language-python">
+orbiter_fft2 = orbiter_fft.copy()
+
+# mask vertical component (scan lines)
+orbiter_fft2[:280,orbiter_fft.shape[1]//2] = 1 # skip center because you dont want to remove the dc component
+orbiter_fft2[-280:,orbiter_fft.shape[1]//2] = 1
+
+imshow(np.log(abs(orbiter_fft2)), cmap='gray');
+imshow(abs(np.fft.ifft2(orbiter_fft2)), cmap='gray');
+                                </code>
+                            </pre>
+
+                            <div class="gallery-container">
+                                <img class="gallery-img" src="img/3-4_moon_s1.png">
+                                <img class="gallery-img" src="img/3-4_moon_s2.png">
+                            </div>
+
+                            <p>The image is now clean! But we're not done yet...</p>
+
+                        <div class="section">Guests are Coming</div>
+
+                        <p>We have another image of an astronaut visiting us. This time, a checkered pattern is muddling our image. Here is what the frequency plot looks like:</p>
+
+                        <pre><code class="language-python">
+orbiter = imread('moon_image.png')
+orbiter_fft = np.fft.fftshift(np.fft.fft2(orbiter))
+
+fig, ax = plt.subplots(1, 3, gridspec_kw=dict(width_ratios=[16,16,1]),figsize=(16,8))
+img = ax[0].imshow(orbiter, cmap='gray')
+ax[1].imshow(np.log(abs(orbiter_fft)), cmap='gray')
+fig.colorbar(img, cax=ax[2]);
+                        </code></pre>
+
+                        <div class="gallery-container">
+                            <img class="gallery-img" src="img/3-4_land_b.png">
+                        </div>
+
+                        <p>What's the difference between a <b>striped</b> pattern and a <b>checkered</b> pattern in a frequency plot?</p>
+
+                        <p>The pattern works in <b>multiple angles</b>! A periodic pattern can be seen whether vertical, horizontal, or diagonally in both slanting directions, therefore, our conundrum as multiplied into a grid-like imprint on the frequency plot. Let's get rid of it:</p>
+
+                        <pre>
+                            <code class="language-python">
+orbiter_fft2 = orbiter_fft.copy()
+
+# mask out the checkered pattern
+orbiter_fft2[orbiter_fft.shape[0]//4+1, :] = 1
+orbiter_fft2[orbiter_fft.shape[0]-orbiter_fft.shape[0]//4, :] = 1
+orbiter_fft2[:, orbiter_fft.shape[1]//4+1] = 1
+orbiter_fft2[:, orbiter_fft.shape[1]-orbiter_fft.shape[1]//4] = 1
+orbiter_fft2[178, :] = 1
+orbiter_fft2[orbiter_fft.shape[0]-178, :] = 1
+orbiter_fft2[:, 236] = 1
+orbiter_fft2[:, orbiter_fft.shape[1]-236] = 1
+
+imshow(np.log(abs(orbiter_fft2)), cmap='gray');
+imshow(abs(np.fft.ifft2(orbiter_fft2)), cmap='gray');
+                            </code>
+                        </pre>
+
+                        <div class="gallery-container">
+                            <img class="gallery-img" src="img/3-4_land_s1.png">
+                            <img class="gallery-img" src="img/3-4_land_s2.png">
+                        </div>
+
+                        <p>Hooray! 🌒</p>
+                        
                         </div>
                     </div>
                 </div>
