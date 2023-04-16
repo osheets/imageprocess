@@ -1,6 +1,4 @@
-* {
-    box-sizing: border-box;
-}
+* {box-sizing: border-box}
 
 body {
     font-family: "Bai Jamjuree", "Lato", sans-serif;
@@ -10,17 +8,37 @@ body {
     flex-direction: column;
 }
 
-hr.dotted {
-    border-top: 1px dotted #bbb;
-  }
+strong {
+  color: orangered;
+}
+
+hr.dotted {border-top: 1px dotted #bbb}
 
 h2 {
     font-size: 28px;
     font-weight: 900;
 }
 
-h3 {
-    font-size: 28px;
+h3 {font-size: 28px}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 15px;
+}
+
+td, th {
+  border: 1px solid #606060;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: rgb(210, 210, 210);
+}
+
+td {
+  background-color: white;
 }
 
 .session {
@@ -29,9 +47,7 @@ h3 {
     color: gray;
 }
 
-.tablinks {
-    font-family: "Bai Jamjuree", sans-serif;
-}
+.tablinks {font-family: "Bai Jamjuree", sans-serif}
 
 .header {
     display: flex;
@@ -65,8 +81,8 @@ h3 {
     background: white;
     color: black;
     font-weight: 800;
-    border-bottom: 1px dotted black;
-    font-size: 16px;
+    border-bottom: 1px dotted orangered;
+    font-size: 22px;
 }
 
 .body {
@@ -80,29 +96,22 @@ h3 {
   }
 
 #container {
-    /* padding: 32px; */
-    /* min-width: 500px; */
     display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
     overflow: scroll;
-    -ms-overflow-style: none;  /* IE and Edge */
+    -ms-overflow-style: none;
     scrollbar-width: none;
-    /* background-color: #e5e5f7;
-    opacity: 1; */
     background-image: radial-gradient(#bdbfe2 0.5px, #ffffff 0.5px);
     background-size: 10px 10px;
   }
 
-.container::-webkit-scrollbar {
-    display: none;
-  }
+.container::-webkit-scrollbar {display: none}
 
-.blog-container {
-    padding: 32px;
-}
+.blog-container {padding: 32px}
 
 .img-container {
     width: 100%;
@@ -111,7 +120,7 @@ h3 {
 }
 
 .txt-container {
-    padding: 0px 50px;
+    padding: 20px 80px;
     text-align: justify;
 }
 
@@ -120,7 +129,6 @@ h3 {
     flex-direction:row;
     flex-wrap:wrap;
     width:100%;
-    /* max-width: 100%; */
     justify-content: center;
     align-items: center;
     padding: 30px 0;
@@ -130,7 +138,6 @@ h3 {
 .gallery-img {
     max-width: 100%;
     max-height: 300px;
-
 }
 
 .tab {
@@ -141,17 +148,11 @@ h3 {
     flex-direction: column;
     justify-content: flex-start;
     height: 100vh;
-    /* height: calc(100vh - 60px); */
-    /* padding: 16px; */
 }
 
-.tablinks > i {
-  display: none;
-}
+.tablinks > i {display: none}
 
-.tablinks > p > i {
-  padding-right: 8px;
-}
+.tablinks > p > i {padding-right: 8px}
 
 .tab button {
     display: block;
@@ -183,7 +184,6 @@ h3 {
 
 .tabcontent {
     float: left;
-    /* padding: 0px 50px; */
     width: 100%;
 }
 
@@ -211,10 +211,7 @@ h3 {
     color: red;
   } */
 
-  /* Style the button that is used to open and close the collapsible content */
 .collapsible {
-    /* background-color: #eee; */
-    /* color: #444; */
     font-size: 28px;
     font-weight: 900;
     font-family: 'Bai Jamjuree', 'Lato', sans-serif;
@@ -224,25 +221,22 @@ h3 {
     border: none;
     text-align: left;
     outline: none;
-    /* font-size: 15px; */
   }
   
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.collapsible:hover {
-    background-color: rgb(60,60,60);
-  }
+.collapsible:hover {background-color: rgb(60, 60, 60)}
   
-  .content {
+.content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
     background-color: orange;
-  }
+}
 
 .progress-container {
   width: 100%;
   height: 8px;
-  background: #ccc;
+  background-image: linear-gradient(130deg, #ffbb00 25%, #fff2a8 25%, #fff2a8 50%, #ffbb00 50%, #ffbb00 75%, #fff2a8 75%, #fff2a8 100%);
+background-size: 52.22px 62.23px;
   position:sticky;
   top: 0;
   z-index: 1;
@@ -266,39 +260,15 @@ h3 {
     height: 100%;
     box-sizing: border-box;
   }
-  .tab p {
-    display: none;
-  }
-
-  .tab i {
-    display: block;
-  }
-
-  .header {
-    font-size: 3vw;
-
-  }
-
-  .txt-container p {
-    font-size: 12px;
-  }
-
-  .blog-container {
-    padding: 0;
-  }
-
-  .footer {
-    position:relative;
-  }
-
-  code {
-    font-size: 11px
-  }
+  .tab p {display: none}
+  .tab i {display: block}
+  .header {font-size: 3vw}
+  .txt-container p, .txt-container ul, .txt-container ol, .txt-container table {font-size: 12px}
+  .blog-container {padding: 0}
+  .footer {position:relative}
+  code {font-size: 11px}
 }
 
 @media screen and (max-width: 1000px) {
-  h3, .session {
-    font-size: 2.5vw;
-  }
+  h3, .session {font-size: 2.5vw;}
 }
-  
