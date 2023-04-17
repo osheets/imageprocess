@@ -6,7 +6,11 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
+
+body::-webkit-scrollbar {display: none}
 
 strong {
   color: orangered;
@@ -118,7 +122,7 @@ td {
     background-size: 10px 10px;
   }
 
-.container::-webkit-scrollbar {display: none}
+#container::-webkit-scrollbar {display: none}
 
 .blog-container {padding: 32px}
 
