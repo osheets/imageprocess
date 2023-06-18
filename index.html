@@ -21,7 +21,11 @@
             
         <div class="body">
             <div class="tab">
-                    <button class="tablinks" onclick="openTab(event, '1-2')" id="defaultOpen">
+                <button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">
+                    <i class="fa-solid fa-house"></i>
+                    <p><i class="fa-solid fa-house"></i>Home</p>
+                </button>
+                    <button class="tablinks" onclick="openTab(event, '1-2')">
                         <i class="fa-solid fa-image"></i>
                         <p><i class="fa-solid fa-image"></i>The Digital Image</p>
                     </button>
@@ -37,26 +41,73 @@
                         <p><i class="fa-solid fa-scissors"></i>Image Extraction</p></button>
                     <button class="tablinks" onclick="openTab(event, '9-10')">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <p><i class="fa-solid fa-magnifying-glass"></i>Image Recognition</p></button>
+                        <p><i class="fa-solid fa-magnifying-glass"></i>Image Recognition 1</p></button>
                     <button class="tablinks" onclick="openTab(event, '11-12')">
-                        <i class="fa-solid fa-camera"></i>
-                        <p><i class="fa-solid fa-camera"></i>11-12</p></button>
+                        <i class="fa-solid fa-leaf"></i>
+                        <p><i class="fa-solid fa-leaf"></i>Image Recognition 2</p></button>
                     <button class="tablinks" onclick="openTab(event, '13-14')">
-                        <i class="fa-solid fa-camera"></i>
-                        <p><i class="fa-solid fa-camera"></i>13-14</p></button>
+                        <i class="fa-solid fa-gear"></i>
+                        <p><i class="fa-solid fa-gear"></i>Machine Learning</p></button>
                     <button class="tablinks" onclick="openTab(event, '15-16')">
-                        <i class="fa-solid fa-camera"></i>
-                        <p><i class="fa-solid fa-camera"></i>15-16</p></button>
+                        <i class="fa-solid fa-music"></i>
+                        <p><i class="fa-solid fa-music"></i>Special Topics 1</p></button>
                     <button class="tablinks" onclick="openTab(event, '17-18')">
-                        <i class="fa-solid fa-camera"></i>
-                        <p><i class="fa-solid fa-camera"></i>17-18</p></button>
+                        <i class="fa-solid fa-bomb"></i>
+                        <p><i class="fa-solid fa-bomb"></i>Special Topics 2</p></button>
             </div>
             
             <div id="container">
                 
                 <div class="progress-container">
                     <div class="progress-bar" id="myBar"></div>
-                  </div>
+                </div>
+
+
+                <div id="home" class="tabcontent">
+                    <div class="txt-container">
+                        <h3><span class="session">HOME</span> Image</h3>
+                        <p>Notes and reflections in understanding image processing fundamentals from Prof. Gino Borja's class. <br>Click any blog post below or navigate using the sidebar.
+                        </p>
+                    </div>
+
+                    <div class="home-container">
+                        <img class="img-container" src="img/1-2_artd.png" style="object-position: 100% 25%;" onclick="openTab(event, '1-2')">
+                        <div class="centered" onclick="openTab(event, '1-2')">1-2. 🖼️ Intro to the Digital Image</div>
+                    </div>
+                    <div class="home-container">
+                        <img class="img-container" src="img/3-4_header.jpg" style="object-position: 100% 25%;" onclick="openTab(event, '3-4')">
+                        <div class="centered" onclick="openTab(event, '3-4')">3-4. 🌟 Extensively Cleaning up the Moon</div>
+                    </div>
+                    <div class="home-container">
+                        <img class="img-container" src="img/5-6_header.jpg" style="object-position: 100% 25%;" onclick="openTab(event, '5-6')">
+                        <div class="centered" onclick="openTab(event, '5-6')">5-6. ❓ Who's That Pokemon?</div>
+                    </div>
+                    <div class="home-container">
+                        <img class="img-container" src="img/7-8_header.jpg" style="object-position: 100% 25%;" onclick="openTab(event, '7-8')">
+                        <div class="centered" onclick="openTab(event, '7-8')"> 7-8. 🔬 Cells at Work</div>
+                    </div>
+                    <div class="home-container">
+                        <img class="img-container" src="img/9-10_header.png" style="object-position: 100% 25%;" onclick="openTab(event, '9-10')">
+                        <div class="centered" onclick="openTab(event, '9-10')">9-10. 🌱 Isolating Greenery</div>
+                    </div>
+                    <div class="home-container">
+                        <img class="img-container" src="img/11-12_header.jpg" style="object-position: 100% 25%;" onclick="openTab(event, '11-12')">
+                        <div class="centered" onclick="openTab(event, '11-12')">11-12. 👋 Watch the Hands</div>
+                    </div>
+                    <div class="home-container">
+                        <img class="img-container" src="img/13-14_header.jpg" style="object-position: 100% 25%;" onclick="openTab(event, '13-14')">
+                        <div class="centered" onclick="openTab(event, '13-14')">13-14. 🍃 Leaf Me Alone</div>
+                    </div>
+                    <div class="home-container">
+                        <img class="img-container" src="img/15-16_header.jpg" style="object-position: 100% 25%;" onclick="openTab(event, '15-16')">
+                        <div class="centered" onclick="openTab(event, '15-16')">15-16. 🎶 Focus on the Rhythm</div>
+                    </div>
+                    <div class="home-container">
+                        <img class="img-container" src="img/17-18_header.png" style="object-position: 100% 25%;" onclick="openTab(event, '17-18')">
+                        <div class="centered" onclick="openTab(event, '17-18')">17-18: 💣 Colorblind Bomb Defusal</div>
+                    </div>
+                    
+                </div>
 
                 <div id="1-2" class="tabcontent">
                     <img class="img-container" src="img/1-2_artd.png" style="object-position: 100% 25%;">
@@ -90,9 +141,18 @@
                             <p>While analog images have merit, for example, for large-scale printing where we want to avoid pixelized artifacts, majority of processing techniques are for the digital image. For this course, we will go through these techniques.
                             </p>
 
+                            <div class="takeaway-container">
+                                <p><strong><span style="color:black;">💯 MAIN TAKEAWAYS</span></strong></p>
+                                    <ol>
+                                        <li><strong>Image Processing requires the digitalization of images</strong>, which limits the color space of an image to a finite spectrum of cells.</li>
+                                        <li><strong>While analog images have near-infinite resolution</strong>, these are chemically produced and fade overtime over the digital image.</li>
+                                        <li><strong>There are different kinds of color types spaces with a different numbers of channels</strong> which may vary in usefulness depending on your use case.</li>
+                                    </ol>
+                              </div>
+
                             <div class="section">The Digital Image</div>
 
-                            <p>The digital image is represented by grids of <b>cells</b> or pixels, assigned with corresponding values applied to the whole area of the cell.
+                            <p>The digital image is represented by grids of <b>cells</b> or pixels, assigned with corresponding values applied to the whole area of the cell.</p>
                             
                             
                            <p>To digitalize an image, we consider the following:</p>
@@ -154,6 +214,16 @@
                         <div class="txt-container">
 
                             <p>This section focuses on <b><span style="color:orangered">Enhancement <span style="color:lightgrey">Extraction Recognition</span>  Image Processing Techniques.</span></b></p>
+
+                            <div class="takeaway-container">
+                                <p><strong><span style="color:black;">💯 MAIN TAKEAWAYS</span></strong></p>
+                                    <ol>
+                                        <li><strong>Before doing other upstream tasks, images should be enhanced or cleaned</strong> to maximize its helpfulness later in a pipeline.</li>
+                                        <li><strong>Image enhancement techniques are algorithmic and often manually tweaked</strong>, through trial and error until subjectively satisfactory to the user's use case, such as in white balancing and histogram manipulation.</li>
+                                        <li><strong>Fourier Transform eliminates periodic patterns in images</strong>, which may be periodic at several angles and therefore must be accounted for in all these angles when masking these signals in a frequency space.</li>
+                                    </ol>
+                              </div>
+
 
                             <p>Image enhancement is useful for cleaning or augmenting images for personal use or professional use as an input for further analysis in a larger pipeline. Of the many techniques available, the following will be discussed:
                             </p>
@@ -288,6 +358,16 @@ imshow(abs(np.fft.ifft2(orbiter_fft2)), cmap='gray');
                         <div class="txt-container">
 
                             <p>This section focuses on <b>Image Cleaning/Processing</b> techniques that prepare images for tasks like <b><span style="color:orangered">Image Extraction and Recognition.</span></b></p>
+
+                            <div class="takeaway-container">
+                                <p><strong><span style="color:black;">💯 MAIN TAKEAWAYS</span></strong></p>
+                                    <ol>
+                                        <li><strong>Image cleaning techniques also involve some trial and error</strong> until subjectively satisfactory to the user's purpose.</li>
+                                        <li><strong>Morphological operations require an understanding of how each operation edits each pixel</strong>, to maximize its usefuless. Erosion, dilation, closing, opening, and more are tools that become useless if you do not understand the logic behind how it decides if a pixel is 1 or 0 based on its surroundings and structuring element.</li>
+                                        <li><strong>Spatial filters, even if they are the same type, vary in effect depending on its kernel size.</strong> These filters also change depending on other things, like padding and stride, especially when applied to CNNs.</li>
+                                    </ol>
+                              </div>
+
 
                             <p>In an image processing pipeline, certain images may come in with dust particles, poor scanning quality, and portions we are not interested in. There are a few ways we can sharpen our images ahead of time to focus on the shapes that matter, for later extraction and recognition. This is akin to cleaning the data in a tabular form before feeding it into a machine learning model for training. The better the quality the data, in this case, the more defined the shapes, the better the algorithm or model will be at correctly labelling what it is tasked to classify.</p>
 
@@ -581,6 +661,16 @@ for kernel_name, kernel in zip(kernel_names, kernels):
                         <div class="txt-container">
                             <p>This section focuses on <b><span style="color:lightgrey">Enhancement <span style="color:orangered">Extraction</span> Recognition</span>  <span style="color:orangered">Image Processing Techniques.</span></b></p>
 
+                            <div class="takeaway-container">
+                                <p><strong><span style="color:black;">💯 MAIN TAKEAWAYS</span></strong></p>
+                                    <ol>
+                                        <li><strong>Morphological operations will not perfectly isolate all its targets in an image</strong> unless irregular use cases are isolated and handled, which limits the color space of an image to a finite spectrum of cells.</li>
+                                        <li><strong>While blob detetction takes longer and is generally less suited for non-round object identification,</strong> it may be more useful in cases where objects are circular or ring-like in nature.</li>
+                                        <li><strong>Enhancing an image before extracting features from it may save a lot of time, </strong> for example, by balancing the lighting in the edges of a blood cell slide image so these side cells are not fragmented during connected component extraction.</li>
+                                    </ol>
+                              </div>
+
+
                             <p>Of the extraction methods available, there are two classical methods of detecting objects in our image:
                                 <ol>
                                     <li><b>Blob Detection</b></li>
@@ -849,101 +939,861 @@ plt.title('mean area * 2');
                 </div>
 
                 <div id="9-10" class="tabcontent">
-                    <img class="img-container" src="img/1-2_header.jpg">
+                    <img class="img-container" src="img/9-10_header.png">
                     <div class="blog-container">
-                        <div class="subheader"><h3><span class="session">SESSION 9-10</span> TBA</h3></div>
+                        <div class="subheader"><h3><span class="session">SESSION 9-10</span> 🌱 Isolating Greenery</h3></div>
                         <div class="txt-container">
-                            <p>London is the capital city of England. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt dictum felis, ut accumsan lacus aliquam sit amet. Maecenas finibus, sem nec rhoncus rutrum, ante tellus molestie dolor, id tristique massa mi et ante. Vivamus tellus dui, viverra et nunc quis, auctor ullamcorper velit. Pellentesque at turpis a diam eleifend suscipit. Curabitur id massa ut felis vulputate consequat sit amet eu ipsum. Vivamus pretium est et egestas sollicitudin. Praesent eleifend non nisl a elementum. Nullam laoreet elementum purus eget gravida. Nam tincidunt suscipit est, a dignissim lacus gravida vel. Curabitur maximus velit eget consectetur viverra. Maecenas posuere sem at fermentum eleifend. Sed finibus fringilla odio at ultricies.
-                                Aenean erat sem, luctus sollicitudin volutpat in, tincidunt eget massa. Nullam tempus ligula id elit vulputate laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit lacinia eros, sed molestie dui faucibus in. Aenean id ex rutrum eros ullamcorper consequat ut ut tortor. Nulla nec bibendum nulla, sed molestie arcu. Fusce auctor ipsum id sodales luctus. Aliquam tincidunt ac nisi et malesuada. Proin condimentum nulla at tellus volutpat consectetur. Quisque faucibus nibh id metus accumsan hendrerit. Quisque finibus turpis luctus dui cursus, eleifend viverra ligula imperdiet.
-                                Nullam urna enim, ullamcorper in nibh vel, ullamcorper imperdiet purus. Phasellus sit amet magna vehicula, venenatis quam a, sollicitudin lacus. Quisque non accumsan elit. Aliquam ultrices turpis in erat hendrerit fringilla non nec eros. Nam id placerat nisi. Etiam sed viverra libero. Integer rhoncus mi vel dui ullamcorper, at posuere lacus tempor. Donec felis risus, dictum nec venenatis molestie, tempor id purus. Cras nec pretium nisl. Fusce eleifend felis vestibulum leo molestie, et malesuada mi blandit. Cras eget varius velit. Ut porta tempus feugiat. Aenean sodales ultrices lectus, vel facilisis augue.
-                                Aliquam quis velit interdum, congue dui luctus, luctus tellus. Pellentesque eleifend congue purus, et sodales tellus cursus vel. Nam feugiat ligula nunc, a facilisis ligula malesuada a. Morbi suscipit id nisl et bibendum. Quisque quis purus eget eros ullamcorper volutpat ac sed orci. Nullam rhoncus vehicula egestas. Sed euismod et tellus a eleifend. Curabitur posuere est vitae ultrices convallis. Nullam eu ornare lorem, at malesuada massa. Fusce sagittis mi a blandit gravida. Maecenas id nunc ultricies, vestibulum ante varius, varius turpis.
-                                Vestibulum facilisis mauris ultrices purus suscipit dapibus. Phasellus nec iaculis ex. Sed sed lorem id odio vestibulum lacinia. Mauris tristique faucibus tellus, non semper tortor pharetra non. Ut et dolor et nulla rutrum tristique vel id velit. Suspendisse potenti. Sed vitae pulvinar ligula. Sed tempus egestas magna, a dapibus lorem vestibulum id. In aliquam purus id est tempus, vel maximus sapien consectetur. Ut dapibus augue eget diam luctus, vitae congue massa suscipit. Praesent a turpis id tortor pellentesque tincidunt. Curabitur id egestas diam. Vestibulum sit amet accumsan tortor, at consequat lectus.
+                            <p>This section focuses on <b><span style="color:lightgrey">Enhancement Extraction <span style="color:orangered">Recognition</span></span>  <span style="color:orangered">Image Processing Techniques.</span></b></p>
+
+                            <div class="takeaway-container">
+                                <p><strong><span style="color:black;">💯 MAIN TAKEAWAYS</span></strong></p>
+                                    <ol>
+                                        <li><strong>Thresholding does not need to be done through trial and error.</strong> By using Otsu's method, we can binarize an image as best we can through inter-class variance based on intensity values and their fraction of pixels in an image.</li>
+                                        <li><strong>Segmentation in colored spaces are a bit trickier.</strong>RGB and HSV thresholding require a good understanding of each channel to be able to isolate the objects you desire, like what colors to mix in RGB, and what combination of hues and values to select in HSV.</li>
+                                        <li><strong>KMeans is an alternative but unreliable image segmenter.</strong> KMeans is another approach to segment, but as an unsupervised learning method, its results are not consistent, and are not always guaranteed to isolate the objects you want.</li>
+                                    </ol>
+                              </div>
+
+                            <p>
+                                In many cases, our object of interest is not the image itself, but chunks that make up the image, independently identified and assessed. Image segmentation techniques assist in this task.
                             </p>
-                            <p>Proin vitae aliquet nisl. Nam tristique lectus sit amet odio posuere rutrum. Pellentesque massa neque, feugiat non purus nec, eleifend feugiat magna. Ut egestas hendrerit mauris vitae porttitor. Suspendisse vulputate dolor est. Etiam vehicula aliquet leo ac maximus. Vestibulum varius arcu neque, varius ultrices tortor suscipit ac. Nam mollis eu arcu a molestie. Proin suscipit accumsan turpis. Morbi enim risus, luctus in sodales a, tempus sit amet dolor. Vestibulum venenatis, purus sit amet pharetra volutpat, libero nibh sodales erat, in elementum purus velit ac justo. Nullam convallis, neque eget fringilla ultricies, nunc quam scelerisque turpis, eget molestie sapien elit in urna. Etiam ac mi tellus. In hac habitasse platea dictumst. Proin ac felis nec erat accumsan fermentum. Pellentesque elit diam, accumsan et fringilla ut, placerat et mauris.
-                                Mauris sed gravida mi, vel bibendum est. Praesent fringilla odio felis, at commodo urna posuere bibendum. Duis vel risus felis. Maecenas in magna eu dolor ultricies feugiat. Suspendisse vitae mauris fringilla nibh mattis faucibus sed vitae libero. Suspendisse at pulvinar eros. Mauris suscipit, eros ut porta malesuada, neque nulla rutrum orci, nec mollis mi sapien sed nulla. Suspendisse sodales vel velit non lacinia. Donec at lectus eget dolor bibendum blandit id ut diam. Sed mattis justo erat, et pharetra libero ultricies quis. Aenean scelerisque ac tellus eget varius. Sed dictum, sapien eu eleifend placerat, ante odio finibus nisl, at ullamcorper urna nisi a nisi.
-                                Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean arcu lacus, accumsan sed consequat a, sodales in risus. Aliquam eu pulvinar augue, in commodo augue. Nulla rutrum risus a euismod fermentum. Cras sit amet risus varius, iaculis leo eget, vehicula libero. Fusce sem urna, tempor a fermentum ultrices, vestibulum vitae felis. Duis sit amet maximus mauris, vitae accumsan dolor. Aenean molestie nisi vel lacinia dapibus. Vestibulum faucibus diam nec nulla luctus fermentum. Nullam maximus eros non lectus ullamcorper, eu vestibulum elit eleifend. Mauris posuere placerat elit, ac sagittis nisi feugiat at. Aliquam vel neque vulputate, imperdiet lacus sit amet, lobortis lectus. Donec id libero a turpis suscipit fringilla. Proin facilisis fermentum risus non suscipit.
-                                Quisque pharetra dapibus pretium. Mauris finibus est nunc, sed facilisis quam viverra sed. Vestibulum faucibus nisl sodales auctor congue. Aliquam viverra non ipsum a ultricies. Praesent vel sapien ut ante dapibus pretium nec quis dolor. Morbi vel sollicitudin metus. Sed varius vehicula eros, at fringilla tortor. Nullam vehicula ligula nec mi bibendum consequat. Sed eget lorem vitae purus blandit consequat in id arcu. In hendrerit magna quis tempor vestibulum. Mauris quis purus et quam semper accumsan. Proin lobortis feugiat finibus. Nam porttitor tortor id posuere tincidunt. Nam a ligula eu tortor lobortis lacinia. Integer in imperdiet enim. Pellentesque a feugiat velit.
-                                Proin varius est id molestie venenatis. Maecenas lobortis rhoncus velit in elementum. Integer nisl purus, pellentesque maximus nunc quis, dictum aliquam turpis. Sed sed nunc in elit bibendum egestas ac at ligula. Praesent non risus mi. In tincidunt urna at dictum pellentesque. Cras in ullamcorper mi. Suspendisse at ipsum diam.</p>
+                            <p>
+                                There are several ways to segment images, such as:
+                                <ol>
+                                    <li><b>Thresholding and Otsu's Method:</b> An algorithmic, non-trial and error way to binarize images (0 or 1 value only, where 1 is usually the pixel value of objects of interest).</li>
+                                    <li><b>Color Image Segmentation:</b> utilizing color spaces to isolate specific parts of images that meet these channel requirements, such as in RGB and HSV</li>
+                                </ol>
+                            </p>
+
+                            <div class="section">Using Color Image Segmentation</div>
+
+                            <p>In this section, we will focus on how to use HSV channels for color image segmentation to isolate parts of an image.</p>
+
+                            <p>We will do this by using a drawing of mine as an example. This is an image of a lady wearing red sitting in a dim room with plants in it.</p>
+
+                            <div class="gallery-container">
+                                <img class="gallery-img" src="img/9-10_image.png">
+                            </div>
+
+                            <p>Our task is to isolate the <b>greenery</b> from everything else in the image.</p>
+
+                            <p>I used 2 approaches to do this:
+                                <ol>
+                                    <li><strong>HSV channel thresholding.</strong> Manually tweaking values in hue, saturation, and value channels until I get the values of the greenery and nothing else left.</li>
+                                    <li><strong>Kmeans.</strong> This unsupervised method can also be applied to images! Clustering pixels of similar channel values is another way to isolate important parts of images, although the values of these clusters are not guaranteed to find the specific values that you are looking for.</li>
+                                </ol>
+                            </p>
+
+                            <div class="section">Greenery with HSV</div>
+
+                            <p>HSV has 3 channels, Hue, Saturation, and Value. Most digital art and imagery are set in RGB color spaces, so there is a need to translate from RGB to HSV. The code below shows how one might import an RGB image and convert it to HSV. Each channel is isolated to show what Hue, Saturation, and Value look like to contribute to an image.</p>
+
+                            <pre>
+                                <code class="language-python">
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+%matplotlib inline
+from skimage.color import rgba2rgb
+from skimage.color import rgb2hsv
+
+fig, ax = plt.subplots(1, 4, figsize=(12,4), dpi=200)
+ax[0].imshow(jj)
+ax[0].set_title('Original')
+ax[1].imshow(jj_hsv[:,:,0], cmap='hsv')
+ax[1].set_title('Hue')
+ax[2].imshow(jj_hsv[:,:,1], cmap='gray')
+ax[2].set_title('Saturation')
+ax[3].imshow(jj_hsv[:,:,2], cmap='gray')
+ax[3].set_title('Value')
+fig.tight_layout()
+plt.show()
+                                </code>
+                            </pre>
+
+                            <div class="gallery-container">
+                                <img class="gallery-img" src="img/9-10_hsv_1.png">
+                            </div>
+
+                            <p>Unlike RGB, color is contained solely in the Hue channel. Saturation and value are more on the purity and the brightness of those base colors, respectively.</p>
+
+                            <p>Because some of the greenery in this image is partially obscured, the greenery will have different values and saturations. We therefore will rely on tweaking the values of Hue to get all the green.</p>
+
+                            <pre>
+                                <code class="language-python">
+fig, ax = plt.subplots(1, 2, figsize=(8,4), dpi=200)
+lower_mask = jj_hsv[:,:,0] > 0.33
+upper_mask = jj_hsv[:,:,0] < 0.42
+val_mask = (jj_hsv[:, :, 1] > 0.7) | (jj_hsv[:, :, 1] < 0.1)
+
+mask = upper_mask*lower_mask*val_mask
+ax[0].imshow(mask, cmap='gray')
+
+red = jj[:,:,0]*mask
+green = jj[:,:,1]*mask
+blue = jj[:,:,2]*mask
+masked = np.dstack((red,green,blue))
+ax[1].imshow(masked);
+                                </code>
+                            </pre>
+
+                            <div class="gallery-container">
+                                <img class="gallery-img" src="img/9-10_hsv_2.png">
+                            </div>
+
+                            <p>Our filter consists of constricting hue between values of 0.33 - 0.42 (green color range), and values above 0.7 (so as not to accidentally capture extremely dark green values, that are not included in the greenery).</p>
+
+                            <p>The result is promising, capturing both dark and light portions of the greenery at the bottom of the image as well as the side. Unfortunately, as a side effect it also took a bit of the chair handle's green too.</p>
+
+                            <div class="section">Greenery with KMeans</div>
+
+                            <p>Now let's see what happens when we implement KMeans. The disadvantage of KMeans is that it will not guarantee clusters that isolate your desired element. But let's see what happens. The following is a KMeans implementation using only k=2 or two clusters in our image.</p>
+
+                            <pre>
+                                <code class="language-python">
+from sklearn.cluster import KMeans
+np.random.seed(1)
+
+x, y, z = rgba2rgb(jj).shape
+jj_2d = rgba2rgb(jj).reshape(x*y, z)
+jj_2d.shape
+
+n = 2
+kmeans_cluster = KMeans(n_clusters=n)
+kmeans_cluster.fit(jj_2d)
+cluster_labels = kmeans_cluster.labels_
+
+plt.figure(figsize = (15,8))
+plt.imshow(cluster_labels.reshape(x, y), cmap='coolwarm')
+plt.colorbar()
+plt.show()
+
+fig, ax = plt.subplots(1, n, dpi=200, figsize=(12, 4))
+
+for i in range(n):
+    mask = cluster_labels.reshape(x, y) == i
+    red = jj[:,:,0]*mask
+    green = jj[:,:,1]*mask
+    blue = jj[:,:,2]*mask
+    masked = np.dstack((red,green,blue))
+    ax[i].imshow(masked)
+    ax[i].set_title(f'Cluster {i+1}')
+plt.show()
+                                </code>
+                            </pre>
+
+                            <div class="gallery-container">
+                                <img class="gallery-img" src="img/9-10_kmeans_1.png">
+                            </div>
+                            <div class="gallery-container">
+                                <img class="gallery-img" src="img/9-10_kmeans_2.png">
+                            </div>
+
+                            <p>
+                                KMeans was unable to isolate the greenery, but it <b>was</b> able to isolate the <b>light peaking out the opening of the dim room</b>. This is most likely because it is the highest contrast area compared to the rest of the dark image.
+                            </p>
+
+                            <p>Let's see what happens when we set k=3.</p>
+
+                            <pre>
+                                <code class="language-python">
+n = 3
+kmeans_cluster = KMeans(n_clusters=n)
+kmeans_cluster.fit(jj_2d)
+cluster_labels = kmeans_cluster.labels_
+
+plt.figure(figsize = (15,8))
+plt.imshow(cluster_labels.reshape(x, y), cmap='coolwarm')
+plt.colorbar()
+plt.show()
+
+fig, ax = plt.subplots(1, n, dpi=200, figsize=(12, 4))
+
+for i in range(n):
+    mask = cluster_labels.reshape(x, y) == i
+    red = jj[:,:,0]*mask
+    green = jj[:,:,1]*mask
+    blue = jj[:,:,2]*mask
+    masked = np.dstack((red,green,blue))
+    ax[i].imshow(masked)
+    ax[i].set_title(f'Cluster {i+1}')
+plt.show()
+                                </code>
+                            </pre>
+
+                            <div class="gallery-container">
+                                <img class="gallery-img" src="img/9-10_kmeans_3.png">
+                                <img class="gallery-img" src="img/9-10_kmeans_4.png">
+                            </div>
+
+                            <p>
+                                Still not quite what we were looking for. This time, it separates the red parts of the woman's shirt from the rest of the image. The green is spread across cluster 1 and cluster 3. Unfortunately, green failed to be isolated using KMeans in this scenario.
+                            </p>
+
                         </div>
                     </div>
                 </div>
 
                 <div id="11-12" class="tabcontent">
-                    <img class="img-container" src="img/1-2_header.jpg">
+                    <img class="img-container" src="img/11-12_header.jpg">
                     <div class="blog-container">
-                        <div class="subheader"><h3><span class="session">SESSION 11-12</span> TBA</h3></div>
+                        <div class="subheader"><h3><span class="session">SESSION 11-12</span> 👋 Watch the Hands</h3></div>
                         <div class="txt-container">
-                            <p>London is the capital city of England. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt dictum felis, ut accumsan lacus aliquam sit amet. Maecenas finibus, sem nec rhoncus rutrum, ante tellus molestie dolor, id tristique massa mi et ante. Vivamus tellus dui, viverra et nunc quis, auctor ullamcorper velit. Pellentesque at turpis a diam eleifend suscipit. Curabitur id massa ut felis vulputate consequat sit amet eu ipsum. Vivamus pretium est et egestas sollicitudin. Praesent eleifend non nisl a elementum. Nullam laoreet elementum purus eget gravida. Nam tincidunt suscipit est, a dignissim lacus gravida vel. Curabitur maximus velit eget consectetur viverra. Maecenas posuere sem at fermentum eleifend. Sed finibus fringilla odio at ultricies.
-                                Aenean erat sem, luctus sollicitudin volutpat in, tincidunt eget massa. Nullam tempus ligula id elit vulputate laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit lacinia eros, sed molestie dui faucibus in. Aenean id ex rutrum eros ullamcorper consequat ut ut tortor. Nulla nec bibendum nulla, sed molestie arcu. Fusce auctor ipsum id sodales luctus. Aliquam tincidunt ac nisi et malesuada. Proin condimentum nulla at tellus volutpat consectetur. Quisque faucibus nibh id metus accumsan hendrerit. Quisque finibus turpis luctus dui cursus, eleifend viverra ligula imperdiet.
-                                Nullam urna enim, ullamcorper in nibh vel, ullamcorper imperdiet purus. Phasellus sit amet magna vehicula, venenatis quam a, sollicitudin lacus. Quisque non accumsan elit. Aliquam ultrices turpis in erat hendrerit fringilla non nec eros. Nam id placerat nisi. Etiam sed viverra libero. Integer rhoncus mi vel dui ullamcorper, at posuere lacus tempor. Donec felis risus, dictum nec venenatis molestie, tempor id purus. Cras nec pretium nisl. Fusce eleifend felis vestibulum leo molestie, et malesuada mi blandit. Cras eget varius velit. Ut porta tempus feugiat. Aenean sodales ultrices lectus, vel facilisis augue.
-                                Aliquam quis velit interdum, congue dui luctus, luctus tellus. Pellentesque eleifend congue purus, et sodales tellus cursus vel. Nam feugiat ligula nunc, a facilisis ligula malesuada a. Morbi suscipit id nisl et bibendum. Quisque quis purus eget eros ullamcorper volutpat ac sed orci. Nullam rhoncus vehicula egestas. Sed euismod et tellus a eleifend. Curabitur posuere est vitae ultrices convallis. Nullam eu ornare lorem, at malesuada massa. Fusce sagittis mi a blandit gravida. Maecenas id nunc ultricies, vestibulum ante varius, varius turpis.
-                                Vestibulum facilisis mauris ultrices purus suscipit dapibus. Phasellus nec iaculis ex. Sed sed lorem id odio vestibulum lacinia. Mauris tristique faucibus tellus, non semper tortor pharetra non. Ut et dolor et nulla rutrum tristique vel id velit. Suspendisse potenti. Sed vitae pulvinar ligula. Sed tempus egestas magna, a dapibus lorem vestibulum id. In aliquam purus id est tempus, vel maximus sapien consectetur. Ut dapibus augue eget diam luctus, vitae congue massa suscipit. Praesent a turpis id tortor pellentesque tincidunt. Curabitur id egestas diam. Vestibulum sit amet accumsan tortor, at consequat lectus.
-                            </p>
-                            <p>Proin vitae aliquet nisl. Nam tristique lectus sit amet odio posuere rutrum. Pellentesque massa neque, feugiat non purus nec, eleifend feugiat magna. Ut egestas hendrerit mauris vitae porttitor. Suspendisse vulputate dolor est. Etiam vehicula aliquet leo ac maximus. Vestibulum varius arcu neque, varius ultrices tortor suscipit ac. Nam mollis eu arcu a molestie. Proin suscipit accumsan turpis. Morbi enim risus, luctus in sodales a, tempus sit amet dolor. Vestibulum venenatis, purus sit amet pharetra volutpat, libero nibh sodales erat, in elementum purus velit ac justo. Nullam convallis, neque eget fringilla ultricies, nunc quam scelerisque turpis, eget molestie sapien elit in urna. Etiam ac mi tellus. In hac habitasse platea dictumst. Proin ac felis nec erat accumsan fermentum. Pellentesque elit diam, accumsan et fringilla ut, placerat et mauris.
-                                Mauris sed gravida mi, vel bibendum est. Praesent fringilla odio felis, at commodo urna posuere bibendum. Duis vel risus felis. Maecenas in magna eu dolor ultricies feugiat. Suspendisse vitae mauris fringilla nibh mattis faucibus sed vitae libero. Suspendisse at pulvinar eros. Mauris suscipit, eros ut porta malesuada, neque nulla rutrum orci, nec mollis mi sapien sed nulla. Suspendisse sodales vel velit non lacinia. Donec at lectus eget dolor bibendum blandit id ut diam. Sed mattis justo erat, et pharetra libero ultricies quis. Aenean scelerisque ac tellus eget varius. Sed dictum, sapien eu eleifend placerat, ante odio finibus nisl, at ullamcorper urna nisi a nisi.
-                                Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean arcu lacus, accumsan sed consequat a, sodales in risus. Aliquam eu pulvinar augue, in commodo augue. Nulla rutrum risus a euismod fermentum. Cras sit amet risus varius, iaculis leo eget, vehicula libero. Fusce sem urna, tempor a fermentum ultrices, vestibulum vitae felis. Duis sit amet maximus mauris, vitae accumsan dolor. Aenean molestie nisi vel lacinia dapibus. Vestibulum faucibus diam nec nulla luctus fermentum. Nullam maximus eros non lectus ullamcorper, eu vestibulum elit eleifend. Mauris posuere placerat elit, ac sagittis nisi feugiat at. Aliquam vel neque vulputate, imperdiet lacus sit amet, lobortis lectus. Donec id libero a turpis suscipit fringilla. Proin facilisis fermentum risus non suscipit.
-                                Quisque pharetra dapibus pretium. Mauris finibus est nunc, sed facilisis quam viverra sed. Vestibulum faucibus nisl sodales auctor congue. Aliquam viverra non ipsum a ultricies. Praesent vel sapien ut ante dapibus pretium nec quis dolor. Morbi vel sollicitudin metus. Sed varius vehicula eros, at fringilla tortor. Nullam vehicula ligula nec mi bibendum consequat. Sed eget lorem vitae purus blandit consequat in id arcu. In hendrerit magna quis tempor vestibulum. Mauris quis purus et quam semper accumsan. Proin lobortis feugiat finibus. Nam porttitor tortor id posuere tincidunt. Nam a ligula eu tortor lobortis lacinia. Integer in imperdiet enim. Pellentesque a feugiat velit.
-                                Proin varius est id molestie venenatis. Maecenas lobortis rhoncus velit in elementum. Integer nisl purus, pellentesque maximus nunc quis, dictum aliquam turpis. Sed sed nunc in elit bibendum egestas ac at ligula. Praesent non risus mi. In tincidunt urna at dictum pellentesque. Cras in ullamcorper mi. Suspendisse at ipsum diam.</p>
+                            <p>This section focuses on <b><span style="color:lightgrey">Enhancement Extraction <span style="color:orangered">Recognition</span></span>  <span style="color:orangered">Image Processing Techniques (Again).</span></b></p>
+
+                    <div class="takeaway-container">
+                        <p><strong><span style="color:black;">💯 MAIN TAKEAWAYS</span></strong></p>
+                            <ol>
+                                <li><strong>Chromaticity segmentation is a more versatile color-based segmentation strategy.</strong> Unlike color image segmentation, chromaticity segmentation allows for parametric and non-parametric segmentations in a graphable spatial representation, instead od just thresholds.</li>
+                                <li><strong>Image Differencing can be used for more complex tasks, like video processing.</strong> Image differencing is a simple but effective method that isolates movement between frames.</li>
+                                <li><strong>Image differencing works best when differencing between grayscaled images.</strong> Color is less consistent betweenn frames due to lighting conditions and therefore will mess with true movement differences. In tasks where color is essential, image differencing is not the best processing tool.</li>
+                            </ol>
+                        </div>
+
+                        <p>
+                            Continuing with image segmentation, the following are other techniques to segment images:
+                            <ol>
+                                <li><b>Chromaticity Segmentation:</b> Similar to color image segmentation, we use color spaces to isolate objects of interest. What makes this unique however, is that values are normalized into proportions of all channels. In a 3-channel color space, you will only need 2 channels to identify your colors of interest, because the 3rd is already implied since the sum of all channels = 1. Segmentation can be parametric or non-parametric.</li>
+                                <li><b>Image Differencing:</b> Changes between two images can be isolated by getting their literal differences. </li>
+                            </ol>
+                        </p>
+
+                        <p>Because we already played around with color spaces in the last section, let's look at how Image Differencing is a simple, but extremely helpful tool in Image Processing.</p>
+
+                        <div class="section">Frame Differencing on Filipino Sign Language</div>
+
+                        <p>
+                            While the technique involves images, Image Differencing is uniquely helpful for use cases such as <b>video processing.</b> Say your upstream task involves training on movements in an image. How do you isolate movement?
+                        </p>
+                            
+                        <p>
+                            You can do this through image differencing, by subtracting a frame by its previous frame to leave only the residual movement between frames.
+                        </p>
+
+                        <p>
+                            The following video is one of many short 4-second video clips contained in the dataset, FSL-105: a dataset for recognizing 105 Filipino sign language videos. This was contributed by Isaiah Jassen Tupal (2023) and can be found and downloaded <a href="https://data.mendeley.com/datasets/48y2y99mb9">here.</a>
+                        </p>
+
+                            <div class="gallery-container">
+                                <video class="gallery-img" src="img/11-12_vid.mov" autoplay controls muted></video>
+                            </div>
+
+                        <p>
+                            Because we would want to use this dataset for hand sign identification, we care particularly about how the hands move. To do this, we will image difference the frames in this video so that what remains is only the movement of this person's hands.
+                        </p>
+
+                        <p>
+                            The following are functions you can use to:
+                            <ol>
+                                <li><b>extract_frames: </b>Save each frame in a video as a png to an output directory.</li>
+                                <li><b>get_diffs: </b>Read a directory of frames and return a list of differenced frames. The frames are converted to grayscale for this, so no color information is retained.</li>
+                            </ol>
+                        </p>
+
+                        <pre>
+                            <code class="language-python">
+from skimage.io import imread, imshow
+from skimage.color import rgb2gray, label2rgb, rgb2hsv
+from skimage.feature import blob_dog, blob_log, blob_doh
+from skimage.morphology import erosion, dilation, opening, closing
+from skimage.measure import label, regionprops
+from skimage.exposure import histogram, cumulative_distribution
+from skimage.filters import threshold_otsu
+
+import cv2
+
+from math import sqrt
+import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle
+import numpy as np
+import pandas as pd
+
+def extract_frames(video_path, output_directory):
+    # Open video
+    video = cv2.VideoCapture(video_path)
+    frame_count = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
+
+    # Save each frame as an image in output_directory
+    os.makedirs(output_directory, exist_ok=True)
+    for frame_number in range(frame_count):
+        ret, frame = video.read()
+        frame_path = os.path.join(output_directory, f"frame_{frame_number}.jpg")
+        cv2.imwrite(frame_path, frame)
+
+    # Release the video file
+    video.release()
+    
+def get_diffs(frame_directory):
+    diffs = []
+    nframes = len(os.listdir(frame_directory))
+    for i in range(1, nframes):
+        imf = rgb2gray(imread(f'{frame_directory}/frame_{i}.jpg'))
+        imi = rgb2gray(imread(f'{frame_directory}/frame_{i-1}.jpg'))
+        diffs.append(np.abs(imf - imi))
+    return diffs
+                            </code>
+                        </pre>
+                        <p>
+                            After this, it's a matter of using these differenced frames and saving them into your preferred format for processing in a longer pipeline. In the case of video processing, if a machine learning model would need a video input, this is how one could store the differenced frames into an MPEG-4 format.
+                        </p>
+
+                        <pre>
+                            <code class="language-python">
+# use extract_frames and get_diffs function to get array of image differences
+extract_frames('path/to/original_video.mov', 'path/to/frame_directory')
+_diffs = np.array(get_diffs('path/to/frame_directory'))
+fps = 60 (check video information to see if you have a different fps)
+
+# save all diff images as video
+out = cv2.VideoWriter('differenced_video.mp4',
+                        cv2.VideoWriter_fourcc(*'mp4v'),
+                        fps,
+                        (_diffs.shape[2], _diffs.shape[1]),
+                        isColor=False)
+
+# Iterate by frame and write into video file
+for i in range(_diffs.shape[0]):
+    data = _diffs[i, :, :]
+    out.write((data*255).astype(np.uint8))
+out.release()
+                            </code>
+                        </pre>
+
+                        <p>
+                            The resulting video would now look something like this (wait for it):
+                        </p>
+
+                        <div class="gallery-container">
+                            <img class="gallery-img" src="img/11-12_diff.gif">
+                        </div>
+
+                        <div class="section">References</div>
+                        <p>
+                            Tupal, Isaiah Jassen (2023), “FSL-105: A dataset for recognizing 105 Filipino sign language videos”, Mendeley Data, V2, doi: 10.17632/48y2y99mb9.2
+                        </p>
                         </div>
                     </div>
                 </div>
 
                 <div id="13-14" class="tabcontent">
-                    <img class="img-container" src="img/1-2_header.jpg">
+                    <img class="img-container" src="img/13-14_header.jpg">
                     <div class="blog-container">
-                        <div class="subheader"><h3><span class="session">SESSION 13-14</span> TBA</h3></div>
+                        <div class="subheader"><h3><span class="session">SESSION 13-14</span> 🍃 Leaf Me Alone</h3></div>
                         <div class="txt-container">
-                            <p>London is the capital city of England. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt dictum felis, ut accumsan lacus aliquam sit amet. Maecenas finibus, sem nec rhoncus rutrum, ante tellus molestie dolor, id tristique massa mi et ante. Vivamus tellus dui, viverra et nunc quis, auctor ullamcorper velit. Pellentesque at turpis a diam eleifend suscipit. Curabitur id massa ut felis vulputate consequat sit amet eu ipsum. Vivamus pretium est et egestas sollicitudin. Praesent eleifend non nisl a elementum. Nullam laoreet elementum purus eget gravida. Nam tincidunt suscipit est, a dignissim lacus gravida vel. Curabitur maximus velit eget consectetur viverra. Maecenas posuere sem at fermentum eleifend. Sed finibus fringilla odio at ultricies.
-                                Aenean erat sem, luctus sollicitudin volutpat in, tincidunt eget massa. Nullam tempus ligula id elit vulputate laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit lacinia eros, sed molestie dui faucibus in. Aenean id ex rutrum eros ullamcorper consequat ut ut tortor. Nulla nec bibendum nulla, sed molestie arcu. Fusce auctor ipsum id sodales luctus. Aliquam tincidunt ac nisi et malesuada. Proin condimentum nulla at tellus volutpat consectetur. Quisque faucibus nibh id metus accumsan hendrerit. Quisque finibus turpis luctus dui cursus, eleifend viverra ligula imperdiet.
-                                Nullam urna enim, ullamcorper in nibh vel, ullamcorper imperdiet purus. Phasellus sit amet magna vehicula, venenatis quam a, sollicitudin lacus. Quisque non accumsan elit. Aliquam ultrices turpis in erat hendrerit fringilla non nec eros. Nam id placerat nisi. Etiam sed viverra libero. Integer rhoncus mi vel dui ullamcorper, at posuere lacus tempor. Donec felis risus, dictum nec venenatis molestie, tempor id purus. Cras nec pretium nisl. Fusce eleifend felis vestibulum leo molestie, et malesuada mi blandit. Cras eget varius velit. Ut porta tempus feugiat. Aenean sodales ultrices lectus, vel facilisis augue.
-                                Aliquam quis velit interdum, congue dui luctus, luctus tellus. Pellentesque eleifend congue purus, et sodales tellus cursus vel. Nam feugiat ligula nunc, a facilisis ligula malesuada a. Morbi suscipit id nisl et bibendum. Quisque quis purus eget eros ullamcorper volutpat ac sed orci. Nullam rhoncus vehicula egestas. Sed euismod et tellus a eleifend. Curabitur posuere est vitae ultrices convallis. Nullam eu ornare lorem, at malesuada massa. Fusce sagittis mi a blandit gravida. Maecenas id nunc ultricies, vestibulum ante varius, varius turpis.
-                                Vestibulum facilisis mauris ultrices purus suscipit dapibus. Phasellus nec iaculis ex. Sed sed lorem id odio vestibulum lacinia. Mauris tristique faucibus tellus, non semper tortor pharetra non. Ut et dolor et nulla rutrum tristique vel id velit. Suspendisse potenti. Sed vitae pulvinar ligula. Sed tempus egestas magna, a dapibus lorem vestibulum id. In aliquam purus id est tempus, vel maximus sapien consectetur. Ut dapibus augue eget diam luctus, vitae congue massa suscipit. Praesent a turpis id tortor pellentesque tincidunt. Curabitur id egestas diam. Vestibulum sit amet accumsan tortor, at consequat lectus.
-                            </p>
-                            <p>Proin vitae aliquet nisl. Nam tristique lectus sit amet odio posuere rutrum. Pellentesque massa neque, feugiat non purus nec, eleifend feugiat magna. Ut egestas hendrerit mauris vitae porttitor. Suspendisse vulputate dolor est. Etiam vehicula aliquet leo ac maximus. Vestibulum varius arcu neque, varius ultrices tortor suscipit ac. Nam mollis eu arcu a molestie. Proin suscipit accumsan turpis. Morbi enim risus, luctus in sodales a, tempus sit amet dolor. Vestibulum venenatis, purus sit amet pharetra volutpat, libero nibh sodales erat, in elementum purus velit ac justo. Nullam convallis, neque eget fringilla ultricies, nunc quam scelerisque turpis, eget molestie sapien elit in urna. Etiam ac mi tellus. In hac habitasse platea dictumst. Proin ac felis nec erat accumsan fermentum. Pellentesque elit diam, accumsan et fringilla ut, placerat et mauris.
-                                Mauris sed gravida mi, vel bibendum est. Praesent fringilla odio felis, at commodo urna posuere bibendum. Duis vel risus felis. Maecenas in magna eu dolor ultricies feugiat. Suspendisse vitae mauris fringilla nibh mattis faucibus sed vitae libero. Suspendisse at pulvinar eros. Mauris suscipit, eros ut porta malesuada, neque nulla rutrum orci, nec mollis mi sapien sed nulla. Suspendisse sodales vel velit non lacinia. Donec at lectus eget dolor bibendum blandit id ut diam. Sed mattis justo erat, et pharetra libero ultricies quis. Aenean scelerisque ac tellus eget varius. Sed dictum, sapien eu eleifend placerat, ante odio finibus nisl, at ullamcorper urna nisi a nisi.
-                                Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean arcu lacus, accumsan sed consequat a, sodales in risus. Aliquam eu pulvinar augue, in commodo augue. Nulla rutrum risus a euismod fermentum. Cras sit amet risus varius, iaculis leo eget, vehicula libero. Fusce sem urna, tempor a fermentum ultrices, vestibulum vitae felis. Duis sit amet maximus mauris, vitae accumsan dolor. Aenean molestie nisi vel lacinia dapibus. Vestibulum faucibus diam nec nulla luctus fermentum. Nullam maximus eros non lectus ullamcorper, eu vestibulum elit eleifend. Mauris posuere placerat elit, ac sagittis nisi feugiat at. Aliquam vel neque vulputate, imperdiet lacus sit amet, lobortis lectus. Donec id libero a turpis suscipit fringilla. Proin facilisis fermentum risus non suscipit.
-                                Quisque pharetra dapibus pretium. Mauris finibus est nunc, sed facilisis quam viverra sed. Vestibulum faucibus nisl sodales auctor congue. Aliquam viverra non ipsum a ultricies. Praesent vel sapien ut ante dapibus pretium nec quis dolor. Morbi vel sollicitudin metus. Sed varius vehicula eros, at fringilla tortor. Nullam vehicula ligula nec mi bibendum consequat. Sed eget lorem vitae purus blandit consequat in id arcu. In hendrerit magna quis tempor vestibulum. Mauris quis purus et quam semper accumsan. Proin lobortis feugiat finibus. Nam porttitor tortor id posuere tincidunt. Nam a ligula eu tortor lobortis lacinia. Integer in imperdiet enim. Pellentesque a feugiat velit.
-                                Proin varius est id molestie venenatis. Maecenas lobortis rhoncus velit in elementum. Integer nisl purus, pellentesque maximus nunc quis, dictum aliquam turpis. Sed sed nunc in elit bibendum egestas ac at ligula. Praesent non risus mi. In tincidunt urna at dictum pellentesque. Cras in ullamcorper mi. Suspendisse at ipsum diam.</p>
+                            <p>This section focuses on <b><span style="color:orangered">Applying Image Processing Techniques to Machine Learning.</span></b></p>
+
+                            <div class="takeaway-container">
+                                <p><strong><span style="color:black;">💯 MAIN TAKEAWAYS</span></strong></p>
+                                    <ol>
+                                        <li><strong>Image processing is a useful preprocessing step for image-related machine learning tasks.</strong> Methods like Otsu and morphological operations help in binarizing images and cleaning dust.</li>
+                                        <li><strong>Image processing is a useful feature extraction tool.</strong> It is possible to remove images entirely and simply extract features of the image passed on region properties of a labelled component.</li>
+                                        <li><strong>Image processing is useful when it makes sense.</strong> Sometimes, the task will generate worse results when we add image pre-processing steps. It is important to understand where image processing techniques's strengths lie, and understand when they are advantageous to use.</li>
+                                    </ol>
+                                </div>
+                                <p>
+                                    We now have a lot enhancement, cleaning, extraction, and recognition techniques at our disposal. Let's see if we can apply this to a typical machine learning pipeline.
+                                </p>
+
+                                <div class="section">Leaf Classification</div>
+
+                                <p>
+                                    We will be using a set of pictures of different leaf types. Our task is to <b>classify which type of leaf a leaf is.</b> Here are examples of the five types of leaves we will be classifying.
+                                </p>
+
+                                <div class="gallery-container">
+                                    <img class="gallery-img" src="img/13-14_plant_1.jpg" width="150px">
+                                    <img class="gallery-img" src="img/13-14_plant_2.jpg" width="150px">
+                                    <img class="gallery-img" src="img/13-14_plant_3.jpg" width="150px">
+                                    <img class="gallery-img" src="img/13-14_plant_4.jpg" width="150px">
+                                    <img class="gallery-img" src="img/13-14_plant_5.jpg" width="150px">
+                                </div>
+
+                                <p>This dataset is slightly imbalanced with a <b>PCC x 1.25 of 39.85%</b>. The number of samples per leaf type are as follows, with C and D having more representation than A and B:</p>
+
+                                <div class="gallery-container">
+                                    <img class="gallery-img" src="img/13-14_fig_0.png">
+                                </div>
+
+                                <div class="section">Image Processing in Leaf Classification</div>
+
+                                <p>In order to get from image to machine learning, I did the following steps using image processing techniques:
+                                    <ol>
+                                        <li>
+                                            <strong>Convert images to grayscale</strong>
+                                        </li>
+                                        <li>
+                                            Use <strong>Otsu's Method</strong> to calculate appropriate binary threshold
+                                        </li>
+                                        <li>
+                                            Use <strong>threshold to binarize</strong> the image
+                                        </li>
+                                        <li>
+                                            Clean binarization through <strong>closing morphological operations</strong>
+                                        </li>
+                                        <li>
+                                            Perform image segmentation using <strong>label</strong>
+                                        </li>
+                                        <li>
+                                            Extract features from each labelled segment using <strong>regionprops_table</strong>
+                                        </li>
+                                    </ol>
+                                </p>
+                                <p>
+                                    This was done using the following code:
+                                </p>
+                                <pre>
+                                    <code class="language-python">
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+import glob
+import zipfile
+import os
+os.environ['SKIMAGE_DATADIR'] = '/tmp/.skimage_cache'
+
+from skimage.io import imread, imshow
+from skimage.color import rgb2gray
+
+from skimage.filters import threshold_otsu
+
+from skimage.morphology import erosion, dilation, opening, closing
+from skimage.measure import label, regionprops, regionprops_table
+from skimage.color import label2rgb
+
+# Unzip files
+!rm -rf Leaves
+with zipfile.ZipFile('Leaves.zip', 'r') as zip_ref:
+    zip_ref.extractall('Leaves')
+
+    # Read files, get otsu threshold, close shapes, and get feature properties
+    plant_df = pd.DataFrame()
+    classes = ['A', 'B', 'C', 'D', 'E']
+    
+    for c in classes:
+        plants = glob.glob(f'./Leaves/plant{c}*jpg')
+        for plant in plants:
+            plant = rgb2gray(imread(plant))
+            thresh = threshold_otsu(plant)
+            plant_binary = plant < thresh
+            plant_clean = closing(plant_binary)
+            plant_label = label(plant_clean)
+            plant_props = pd.DataFrame(regionprops_table(plant_label,
+                                            properties=['convex_area',
+                                                        'area',
+                                                        'area_filled',
+                                                        'orientation',
+                                                        'extent',
+                                                        'eccentricity',
+                                                        'equivalent_diameter_area',
+                                                        'axis_major_length',
+                                                        'axis_minor_length']))
+            plant_props['class'] = [c] * len(plant_props)
+        plant_df = pd.concat([plant_df, plant_props])
+                                    </code>
+                                </pre>
+                                <p>
+                                    The resulting dataset after feature extraction now looks like this:
+                                </p>
+                                <div class="gallery-container">
+                                    <img class="gallery-img" src="img/13-14_table_1.jpg">
+                                </div>
+
+                                <p>
+                                    To avoid multicollinearity, I checked a correlation matrix to see any highly associated features. Area filled and equivalent diameter area had high correlation to normal area, so these were dropped.
+                                </p>
+                                <div class="gallery-container">
+                                    <img class="gallery-img" src="img/13-14_fig_1.png">
+                                </div>
+
+                                <div class="section">Machine Learning Pipeline in Leaf Classification</div>
+
+                                <p>From here onwards, a normal pipeline can be implemented. I encode the target labels, split the data into train, validation, and holdout sets, and minmax scale all the features in the training set.</p>
+
+                                <pre>
+                                    <code class="language-python">
+from sklearn.preprocessing import LabelEncoder, MinMaxScaler
+from sklearn.model_selection import train_test_split, GridSearchCV
+
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import LinearSVC
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.ensemble import AdaBoostClassifier
+# !pip install xgboost
+import xgboost as xgb
+# !pip install lightgbm
+import lightgbm as lgb
+
+from mlfuncs import *
+
+# Convert target class into numbers
+labeler = LabelEncoder()
+plant_df['class'] = labeler.fit_transform(plant_df['class'])
+labeler.classes_
+
+# Split data into trainval and holdout sets
+X = plant_df.iloc[:, :-1]
+y = plant_df.iloc[:, -1]
+X_trainval, X_holdout, y_trainval, y_holdout = train_test_split(X, y,
+                                                                test_size=0.25,
+                                                                stratify=y,
+                                                                random_state=1)
+
+# Minmax scale all features
+X_column_names = X.columns
+X_norm = MinMaxScaler().fit_transform(X_trainval)
+X_scaled_trainval = pd.DataFrame(X_norm, columns=X_column_names) 
+
+X_norm = MinMaxScaler().fit_transform(X_holdout)
+X_scaled_holdout = pd.DataFrame(X_norm, columns=X_column_names) 
+                                    </code>
+                                </pre>
+                                <p>
+                                    I used the following classification algorithms:
+                                    <ol>
+                                        <li>KNN</li>
+                                        <li>Logistic (L1)</li>
+                                        <li>Logistic (L2)</li>
+                                        <li>SVM (L1)</li>
+                                        <li>SVM (L2)</li>
+                                        <li>Random Forest</li>
+                                        <li>Gradient Boosting</li>
+                                        <li>AdaBoost</li>
+                                        <li>XGBoost</li>
+                                        <li>LightGBM</li>
+                                    </ol>
+                                </p>
+                                <p>For the <strong>Baseline</strong>, KNN was the best with 52% accuracy.
+After <strong>Finetuning</strong>, Random Forest was the best with an accuracy of 83% and faster runtime using the parameters: {'max_depth': 9, 'max_features': 0.5, 'n_estimators': 500}.
+                                </p>
+                                <div class="gallery-container">
+                                    <img class="gallery-img" src="img/13-14_table_2.jpg">
+                                </div>
+                                <div class="section">Explainability Methods in Leaf Classification</div>
+                                <p>
+                                    I had extracted, derived, and kept the following features using regionprops_table during my image processing:
+                                    <ol>
+                                        <li>convex_area</li>
+                                        <li>area</li>
+                                        <li>orientation</li>
+                                        <li>extent</li>
+                                        <li>eccentricity</li>
+                                        <li>axis_major_length</li>
+                                        <li>axis_minor_length</li>
+                                    </ol>
+                                </p>
+                                <p>
+                                    The most significant feature was orientation across all top-3 models. This is probably because images of Plant A were positioned in a vertical fashion, while images of Plant B were photographed in a horizontal fashion.
+                                </p>
+                                <p>
+                                    Extent, eccentricity, and axis_major_length were also very important. Extent is defined as the "Ratio of pixels in the region to pixels in the total bounding box. Computed as area / (rows * cols)", in other words, how much of the actual shape of the leaf takes up in its bounding box. Slimmer, smoother leaves may fill in the bounding box better while more rigid ones may not. Eccentricity and axis_major_length on the other hand were meant to detect the difference in lengths of certain leaves like Plant A vs the other plant classifications.
+                                </p>
+
+                                <div class="gallery-container">
+                                    <img class="gallery-img" src="img/13-14_fig_2.png">
+                                </div>
+
+                                <div class="section">Class Balance in Leaf Classification</div>
+
+                                <p>
+                                    Some plants were underrepresented, like A and B compared to C and D. This imbalanced dataset meant that when training, the model wouldn't be able to learn from as many examples for these plants, and may end up not learning the features very well.
+                                </p>
+                                <p>
+                                    The PCC X 1.25 for this is also about 39.85%, slightly higher than a completely balanced dataset for 5 classes.
+                                </p>
+                                <p>
+                                    Despite this, when using the best tuned model, Random Forest, the model achieved high accuracy, recall, and precision on the holdout set. The confusion matrix revealed no one class that was glaringly more misclassified than the rest. All of them relatively stick to the diagonal. In fact, plant A and B, which had few samples, were classified near-perfectly.
+                                </p>
+
+                                <div class="gallery-container">
+                                    <img class="gallery-img" src="img/13-14_fig_3.png">
+                                </div>
+
+                                <div class="section">Final Results in Leaf Classification</div>
+
+                                <p> The following were the final results for the best model on the holdout set, with a PCC x 1.25 of 39.85%:
+                                    <ul>
+                                        <li>Accuracy: 80.56%</li>
+                                        <li>Recall: 80.56%</li>
+                                        <li>Precision: 82.71%</li>
+                                    </ul>
+                                </p>
                         </div>
                     </div>
                 </div>
 
                 <div id="15-16" class="tabcontent">
-                    <img class="img-container" src="img/1-2_header.jpg">
+                    <img class="img-container" src="img/15-16_header.jpg">
                     <div class="blog-container">
-                        <div class="subheader"><h3><span class="session">SESSION 15-16</span> TBA</h3></div>
+                        <div class="subheader"><h3><span class="session">SESSION 15-16</span> 🎶 Focus on the Rhythm</h3></div>
                         <div class="txt-container">
-                            <p>London is the capital city of England. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt dictum felis, ut accumsan lacus aliquam sit amet. Maecenas finibus, sem nec rhoncus rutrum, ante tellus molestie dolor, id tristique massa mi et ante. Vivamus tellus dui, viverra et nunc quis, auctor ullamcorper velit. Pellentesque at turpis a diam eleifend suscipit. Curabitur id massa ut felis vulputate consequat sit amet eu ipsum. Vivamus pretium est et egestas sollicitudin. Praesent eleifend non nisl a elementum. Nullam laoreet elementum purus eget gravida. Nam tincidunt suscipit est, a dignissim lacus gravida vel. Curabitur maximus velit eget consectetur viverra. Maecenas posuere sem at fermentum eleifend. Sed finibus fringilla odio at ultricies.
-                                Aenean erat sem, luctus sollicitudin volutpat in, tincidunt eget massa. Nullam tempus ligula id elit vulputate laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit lacinia eros, sed molestie dui faucibus in. Aenean id ex rutrum eros ullamcorper consequat ut ut tortor. Nulla nec bibendum nulla, sed molestie arcu. Fusce auctor ipsum id sodales luctus. Aliquam tincidunt ac nisi et malesuada. Proin condimentum nulla at tellus volutpat consectetur. Quisque faucibus nibh id metus accumsan hendrerit. Quisque finibus turpis luctus dui cursus, eleifend viverra ligula imperdiet.
-                                Nullam urna enim, ullamcorper in nibh vel, ullamcorper imperdiet purus. Phasellus sit amet magna vehicula, venenatis quam a, sollicitudin lacus. Quisque non accumsan elit. Aliquam ultrices turpis in erat hendrerit fringilla non nec eros. Nam id placerat nisi. Etiam sed viverra libero. Integer rhoncus mi vel dui ullamcorper, at posuere lacus tempor. Donec felis risus, dictum nec venenatis molestie, tempor id purus. Cras nec pretium nisl. Fusce eleifend felis vestibulum leo molestie, et malesuada mi blandit. Cras eget varius velit. Ut porta tempus feugiat. Aenean sodales ultrices lectus, vel facilisis augue.
-                                Aliquam quis velit interdum, congue dui luctus, luctus tellus. Pellentesque eleifend congue purus, et sodales tellus cursus vel. Nam feugiat ligula nunc, a facilisis ligula malesuada a. Morbi suscipit id nisl et bibendum. Quisque quis purus eget eros ullamcorper volutpat ac sed orci. Nullam rhoncus vehicula egestas. Sed euismod et tellus a eleifend. Curabitur posuere est vitae ultrices convallis. Nullam eu ornare lorem, at malesuada massa. Fusce sagittis mi a blandit gravida. Maecenas id nunc ultricies, vestibulum ante varius, varius turpis.
-                                Vestibulum facilisis mauris ultrices purus suscipit dapibus. Phasellus nec iaculis ex. Sed sed lorem id odio vestibulum lacinia. Mauris tristique faucibus tellus, non semper tortor pharetra non. Ut et dolor et nulla rutrum tristique vel id velit. Suspendisse potenti. Sed vitae pulvinar ligula. Sed tempus egestas magna, a dapibus lorem vestibulum id. In aliquam purus id est tempus, vel maximus sapien consectetur. Ut dapibus augue eget diam luctus, vitae congue massa suscipit. Praesent a turpis id tortor pellentesque tincidunt. Curabitur id egestas diam. Vestibulum sit amet accumsan tortor, at consequat lectus.
-                            </p>
-                            <p>Proin vitae aliquet nisl. Nam tristique lectus sit amet odio posuere rutrum. Pellentesque massa neque, feugiat non purus nec, eleifend feugiat magna. Ut egestas hendrerit mauris vitae porttitor. Suspendisse vulputate dolor est. Etiam vehicula aliquet leo ac maximus. Vestibulum varius arcu neque, varius ultrices tortor suscipit ac. Nam mollis eu arcu a molestie. Proin suscipit accumsan turpis. Morbi enim risus, luctus in sodales a, tempus sit amet dolor. Vestibulum venenatis, purus sit amet pharetra volutpat, libero nibh sodales erat, in elementum purus velit ac justo. Nullam convallis, neque eget fringilla ultricies, nunc quam scelerisque turpis, eget molestie sapien elit in urna. Etiam ac mi tellus. In hac habitasse platea dictumst. Proin ac felis nec erat accumsan fermentum. Pellentesque elit diam, accumsan et fringilla ut, placerat et mauris.
-                                Mauris sed gravida mi, vel bibendum est. Praesent fringilla odio felis, at commodo urna posuere bibendum. Duis vel risus felis. Maecenas in magna eu dolor ultricies feugiat. Suspendisse vitae mauris fringilla nibh mattis faucibus sed vitae libero. Suspendisse at pulvinar eros. Mauris suscipit, eros ut porta malesuada, neque nulla rutrum orci, nec mollis mi sapien sed nulla. Suspendisse sodales vel velit non lacinia. Donec at lectus eget dolor bibendum blandit id ut diam. Sed mattis justo erat, et pharetra libero ultricies quis. Aenean scelerisque ac tellus eget varius. Sed dictum, sapien eu eleifend placerat, ante odio finibus nisl, at ullamcorper urna nisi a nisi.
-                                Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean arcu lacus, accumsan sed consequat a, sodales in risus. Aliquam eu pulvinar augue, in commodo augue. Nulla rutrum risus a euismod fermentum. Cras sit amet risus varius, iaculis leo eget, vehicula libero. Fusce sem urna, tempor a fermentum ultrices, vestibulum vitae felis. Duis sit amet maximus mauris, vitae accumsan dolor. Aenean molestie nisi vel lacinia dapibus. Vestibulum faucibus diam nec nulla luctus fermentum. Nullam maximus eros non lectus ullamcorper, eu vestibulum elit eleifend. Mauris posuere placerat elit, ac sagittis nisi feugiat at. Aliquam vel neque vulputate, imperdiet lacus sit amet, lobortis lectus. Donec id libero a turpis suscipit fringilla. Proin facilisis fermentum risus non suscipit.
-                                Quisque pharetra dapibus pretium. Mauris finibus est nunc, sed facilisis quam viverra sed. Vestibulum faucibus nisl sodales auctor congue. Aliquam viverra non ipsum a ultricies. Praesent vel sapien ut ante dapibus pretium nec quis dolor. Morbi vel sollicitudin metus. Sed varius vehicula eros, at fringilla tortor. Nullam vehicula ligula nec mi bibendum consequat. Sed eget lorem vitae purus blandit consequat in id arcu. In hendrerit magna quis tempor vestibulum. Mauris quis purus et quam semper accumsan. Proin lobortis feugiat finibus. Nam porttitor tortor id posuere tincidunt. Nam a ligula eu tortor lobortis lacinia. Integer in imperdiet enim. Pellentesque a feugiat velit.
-                                Proin varius est id molestie venenatis. Maecenas lobortis rhoncus velit in elementum. Integer nisl purus, pellentesque maximus nunc quis, dictum aliquam turpis. Sed sed nunc in elit bibendum egestas ac at ligula. Praesent non risus mi. In tincidunt urna at dictum pellentesque. Cras in ullamcorper mi. Suspendisse at ipsum diam.</p>
+                            <p>This section focuses on <b><span style="color:orangered">Special Topics in Image Processing.</span></b></p>
+
+                            <div class="takeaway-container">
+                                <p><strong><span style="color:black;">💯 MAIN TAKEAWAY</span></strong></p>
+                                    <p><strong>Homography matrices are useful, but also very trial and error.</strong> Matrix transformation is an incredible tool, but when transforming images from very different case by case bases, fixing these is a patient art that is hard to automate.</p>
+                                </div>
+                                <p>
+                                    The following special topics are useful for specific cases:
+                                    <ol>
+                                        <li><strong>Homography Matrix.</strong> Finding a matrix that can transform an image into a different angle. This is used in cases like image completion and virtual reality, where angles may change and need to be recalibrated to fit the perspective of the use case.</li>
+                                        <li><strong>Texture Metrics.</strong> Identifying areas with irregular intensity values. Texture metrics vary per use case. In general, we shift a moving window across an image and create histograms of its graylevels to calculate the probability of it, which are then passed to a texture metric. An example of this is <b>entropy,</b> which is defined as the probability of a graylevel times the natural log of the probability of that graylevel, for every graylevel. This is useful in geospatial use cases where damage or wreckage might need to be detected, or in other irregular pattern identification scenarios.</li>
+                                    </ol>
+                                </p>
+                                <p>We will try applying a homogrpahy matrix to a simple use case.</p>
+
+                                <div class="section">Homography Matrix for Adjusting Rhythm Game Screen Display</div>
+
+                                <p>
+                                    Below is an image I took from a YouTube short from UserSelf entitled "Best Rhythm Game 2023?", which you can find <a href="https://www.youtube.com/shorts/eDzua7hCQsc">here.</a> UserSelf is playing a rhythm game on their PC called "Melatonin".
+                                </p>
+
+                                <div class="gallery-container">
+                                    <img class="gallery-img" src="img/15-16_image.jpg">
+                                </div>
+
+                                <p>
+                                    However, as with a lot of gameplay footage, I cannot see the screen from a front angle. The perspective of what is happening on the screen is skewed. I would like to unskew this. To do this, we apply a homography matrix. 
+                                </p>
+                                <p>
+                                    To do this, we apply the following steps:
+                                    <ol>
+                                        <li>
+                                            Identify enough source points for there to define the current orientation our image is in.
+                                        </li>
+                                        <li>
+                                            Define the destination points you would like to rearrange the image to.
+                                        </li>
+                                        <li>
+                                            Calculate for the homography matrix and apply to the image.
+                                        </li>
+                                    </ol>
+                                </p>
+                                
+                                <pre>
+                                    <code class="language-python">
+import os
+os.environ['SKIMAGE_DATADIR'] = '/tmp/.skimage_cache'
+
+from skimage.io import imread, imshow
+from skimage.color import rgb2gray
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Reading the image
+game = imread('15-16_image.jpg')
+imshow(game);
+
+# Plotting the source points
+src = np.array([15, 175,
+                30, 625,
+                585, 251,
+                570, 568,
+]).reshape((4, 2))
+
+fig, ax = plt.subplots()
+imshow(game, ax=ax)
+ax.plot(src[:, 0], src[:, 1], 'ro');
+
+# incorrect destination points
+dst = np.array([100, 100,
+                650, 650,
+                100, 650,
+                650, 100,
+]).reshape((4, 2))
+
+# correct destination points
+dst = np.array([100, 100,
+100, 650,
+650, 100,
+650, 650
+]).reshape((4, 2))
+
+from skimage import transform
+tform = transform.estimate_transform('projective', src, dst)
+
+tf_img = transform.warp(game, tform.inverse)
+fig, ax = plt.subplots()
+ax.imshow(tf_img)
+
+
+                                    </code>
+                                </pre>
+
+                                <div class="gallery-container">
+                                    <img class="gallery-img" src="img/15-16_image_1.png">
+                                    <img class="gallery-img" src="img/15-16_image_2.png">
+                                    <img class="gallery-img" src="img/15-16_image_3.png">
+                                </div>
+
+                                <p>
+                                    Some things to keep in mind when doing a homography matrix:
+                                    <ol>
+                                        <li><strong>You need to define at least 3 non-colinear source points.</strong> 3 points that can create a straight line will give infinitely many solutions for a homography matrix. To be safe, you can always define 4.</li>
+                                        <li><strong>Your destination points need to be in the same order as your source points.</strong> In the image above, the cost of ordering your destination points incorrectly is that the image will literally twist itself in the final transformation. You need to follow the same order of the points as in the source to avoid this.</li>
+                                        <li><strong>The farther the points from each other, the easier to misalign.</strong> The four corners of the monitor here are easy enough to define the plane, but imagine an image where this monitor was not present. In cases like this, finding points that are well defined and close to each other (but not collinear) will help in ensuring accuracy in the position you want to transform it to.</li>
+                                    </ol>
+                                </p>
                         </div>
                     </div>
                 </div>
 
                 <div id="17-18" class="tabcontent">
-                    <img class="img-container" src="img/1-2_header.jpg">
+                    <img class="img-container" src="img/17-18_header.png">
                     <div class="blog-container">
-                        <div class="subheader"><h3><span class="session">SESSION 17-18</span> TBA</h3></div>
+                        <div class="subheader"><h3><span class="session">SESSION 17-18</span> 💣 Colorblind Bomb Defusal</h3></div>
                         <div class="txt-container">
-                            <p>London is the capital city of England. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt dictum felis, ut accumsan lacus aliquam sit amet. Maecenas finibus, sem nec rhoncus rutrum, ante tellus molestie dolor, id tristique massa mi et ante. Vivamus tellus dui, viverra et nunc quis, auctor ullamcorper velit. Pellentesque at turpis a diam eleifend suscipit. Curabitur id massa ut felis vulputate consequat sit amet eu ipsum. Vivamus pretium est et egestas sollicitudin. Praesent eleifend non nisl a elementum. Nullam laoreet elementum purus eget gravida. Nam tincidunt suscipit est, a dignissim lacus gravida vel. Curabitur maximus velit eget consectetur viverra. Maecenas posuere sem at fermentum eleifend. Sed finibus fringilla odio at ultricies.
-                                Aenean erat sem, luctus sollicitudin volutpat in, tincidunt eget massa. Nullam tempus ligula id elit vulputate laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit lacinia eros, sed molestie dui faucibus in. Aenean id ex rutrum eros ullamcorper consequat ut ut tortor. Nulla nec bibendum nulla, sed molestie arcu. Fusce auctor ipsum id sodales luctus. Aliquam tincidunt ac nisi et malesuada. Proin condimentum nulla at tellus volutpat consectetur. Quisque faucibus nibh id metus accumsan hendrerit. Quisque finibus turpis luctus dui cursus, eleifend viverra ligula imperdiet.
-                                Nullam urna enim, ullamcorper in nibh vel, ullamcorper imperdiet purus. Phasellus sit amet magna vehicula, venenatis quam a, sollicitudin lacus. Quisque non accumsan elit. Aliquam ultrices turpis in erat hendrerit fringilla non nec eros. Nam id placerat nisi. Etiam sed viverra libero. Integer rhoncus mi vel dui ullamcorper, at posuere lacus tempor. Donec felis risus, dictum nec venenatis molestie, tempor id purus. Cras nec pretium nisl. Fusce eleifend felis vestibulum leo molestie, et malesuada mi blandit. Cras eget varius velit. Ut porta tempus feugiat. Aenean sodales ultrices lectus, vel facilisis augue.
-                                Aliquam quis velit interdum, congue dui luctus, luctus tellus. Pellentesque eleifend congue purus, et sodales tellus cursus vel. Nam feugiat ligula nunc, a facilisis ligula malesuada a. Morbi suscipit id nisl et bibendum. Quisque quis purus eget eros ullamcorper volutpat ac sed orci. Nullam rhoncus vehicula egestas. Sed euismod et tellus a eleifend. Curabitur posuere est vitae ultrices convallis. Nullam eu ornare lorem, at malesuada massa. Fusce sagittis mi a blandit gravida. Maecenas id nunc ultricies, vestibulum ante varius, varius turpis.
-                                Vestibulum facilisis mauris ultrices purus suscipit dapibus. Phasellus nec iaculis ex. Sed sed lorem id odio vestibulum lacinia. Mauris tristique faucibus tellus, non semper tortor pharetra non. Ut et dolor et nulla rutrum tristique vel id velit. Suspendisse potenti. Sed vitae pulvinar ligula. Sed tempus egestas magna, a dapibus lorem vestibulum id. In aliquam purus id est tempus, vel maximus sapien consectetur. Ut dapibus augue eget diam luctus, vitae congue massa suscipit. Praesent a turpis id tortor pellentesque tincidunt. Curabitur id egestas diam. Vestibulum sit amet accumsan tortor, at consequat lectus.
+                            <p>This section focuses on <b><span style="color:orangered">Special Topics in Image Processing (Again).</span></b></p>
+
+                            <div class="takeaway-container">
+                                <p><strong><span style="color:black;">💯 MAIN TAKEAWAY</span></strong></p>
+                                <p>
+                                    <strong>Template matching, much like most image processing techniques, is an art and not a science.</strong> Images are hard to generalize, and while one image may serve as a template, factors like orientation, angle, size, lighting conditions, and color may cause some objects to be missed, and some incorrectly detected.
+                                </p>
+                            </div>
+
+                            <p>
+                                <strong>Template matching</strong> is a technique that uses a template image, and tries to locate all other instance of that template in an image by sliding a window across the image. Depending on the technique, template matching may be size-dependent, orientation-dependent, and color-sensitive. While techniques exist to rectify all these issues, most of these are proprietary.
                             </p>
-                            <p>Proin vitae aliquet nisl. Nam tristique lectus sit amet odio posuere rutrum. Pellentesque massa neque, feugiat non purus nec, eleifend feugiat magna. Ut egestas hendrerit mauris vitae porttitor. Suspendisse vulputate dolor est. Etiam vehicula aliquet leo ac maximus. Vestibulum varius arcu neque, varius ultrices tortor suscipit ac. Nam mollis eu arcu a molestie. Proin suscipit accumsan turpis. Morbi enim risus, luctus in sodales a, tempus sit amet dolor. Vestibulum venenatis, purus sit amet pharetra volutpat, libero nibh sodales erat, in elementum purus velit ac justo. Nullam convallis, neque eget fringilla ultricies, nunc quam scelerisque turpis, eget molestie sapien elit in urna. Etiam ac mi tellus. In hac habitasse platea dictumst. Proin ac felis nec erat accumsan fermentum. Pellentesque elit diam, accumsan et fringilla ut, placerat et mauris.
-                                Mauris sed gravida mi, vel bibendum est. Praesent fringilla odio felis, at commodo urna posuere bibendum. Duis vel risus felis. Maecenas in magna eu dolor ultricies feugiat. Suspendisse vitae mauris fringilla nibh mattis faucibus sed vitae libero. Suspendisse at pulvinar eros. Mauris suscipit, eros ut porta malesuada, neque nulla rutrum orci, nec mollis mi sapien sed nulla. Suspendisse sodales vel velit non lacinia. Donec at lectus eget dolor bibendum blandit id ut diam. Sed mattis justo erat, et pharetra libero ultricies quis. Aenean scelerisque ac tellus eget varius. Sed dictum, sapien eu eleifend placerat, ante odio finibus nisl, at ullamcorper urna nisi a nisi.
-                                Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean arcu lacus, accumsan sed consequat a, sodales in risus. Aliquam eu pulvinar augue, in commodo augue. Nulla rutrum risus a euismod fermentum. Cras sit amet risus varius, iaculis leo eget, vehicula libero. Fusce sem urna, tempor a fermentum ultrices, vestibulum vitae felis. Duis sit amet maximus mauris, vitae accumsan dolor. Aenean molestie nisi vel lacinia dapibus. Vestibulum faucibus diam nec nulla luctus fermentum. Nullam maximus eros non lectus ullamcorper, eu vestibulum elit eleifend. Mauris posuere placerat elit, ac sagittis nisi feugiat at. Aliquam vel neque vulputate, imperdiet lacus sit amet, lobortis lectus. Donec id libero a turpis suscipit fringilla. Proin facilisis fermentum risus non suscipit.
-                                Quisque pharetra dapibus pretium. Mauris finibus est nunc, sed facilisis quam viverra sed. Vestibulum faucibus nisl sodales auctor congue. Aliquam viverra non ipsum a ultricies. Praesent vel sapien ut ante dapibus pretium nec quis dolor. Morbi vel sollicitudin metus. Sed varius vehicula eros, at fringilla tortor. Nullam vehicula ligula nec mi bibendum consequat. Sed eget lorem vitae purus blandit consequat in id arcu. In hendrerit magna quis tempor vestibulum. Mauris quis purus et quam semper accumsan. Proin lobortis feugiat finibus. Nam porttitor tortor id posuere tincidunt. Nam a ligula eu tortor lobortis lacinia. Integer in imperdiet enim. Pellentesque a feugiat velit.
-                                Proin varius est id molestie venenatis. Maecenas lobortis rhoncus velit in elementum. Integer nisl purus, pellentesque maximus nunc quis, dictum aliquam turpis. Sed sed nunc in elit bibendum egestas ac at ligula. Praesent non risus mi. In tincidunt urna at dictum pellentesque. Cras in ullamcorper mi. Suspendisse at ipsum diam.</p>
+
+                            <p>We will be examining the simplest (and free) implementation of template matching using the skimage library.</p>
+
+                            <div class="section">Defusing in the Dark</div>
+
+                            <p>Below is a screenshot from a minigame in <b>New Super Mario Bros.</b> for the Nintendo DS. The game is called <b>Sort or 'Splode,</b> and requires that the player sort the incoming bombs between red and black containers. If bombs loiter for too long, or a bomb gets incorrectly sorted, it explodes and the game is over.</p>
+
+                            <div class="gallery-container">
+                                <img class="gallery-img" src="img/17-18_image.jpg">
+                            </div>
+
+                            <p>
+                                Let's say we are trying to make a program that plays this game for us. The first step is simple: detect where all the bombs are on the screen. Let's start first by trying this on a grayscaled image, and use the top left black bob-omb as a template.
+                            </p>
+
+                            <pre>
+                                <code class="language-python">
+import os
+os.environ['SKIMAGE_DATADIR'] = '/tmp/.skimage_cache'
+
+import numpy as np
+import matplotlib.pyplot as plt
+from skimage.io import imread, imshow
+from skimage.color import rgb2gray
+
+from skimage.feature import match_template
+from skimage.feature import peak_local_max
+
+# Read image
+bombs = imread('17-18_image.jpg')
+
+# Show grayscaled image
+bombs_gray = rgb2gray(bombs)
+imshow(bombs_gray);
+
+# Show template bob-omb
+template_bomb = bombs_gray[135:198, 275:323]
+imshow(template_bomb);
+                                </code>
+                            </pre>
+
+                            <div class="gallery-container">
+                                <img class="gallery-img" src="img/17-18_image_1.png">
+                                <img class="gallery-img" src="img/17-18_image_2.png">
+                            </div>
+
+                            <p>
+                                Now, let's use match_template from skimage.feature to identify what points in the image is most similar to the template.
+                            </p>
+
+                            <pre>
+                                <code class="language-python">
+result = match_template(bombs_gray, template_bomb)
+imshow(result, cmap='viridis');
+                                </code>
+                            </pre>
+
+                            <div class="gallery-container">
+                                <img class="gallery-img" src="img/17-18_image_3.png">
+                            </div>
+
+                            <p>The yellowish dots here indicate areas of high similarity. We can tell based on the original image that these are the placements of the other bombs, so the template matching has worked. We can use peak_local_max to identify these high points. Now let's create bounding boxes for these bombs.</p>
+
+                            <pre>
+                                <code class="language-python">
+imshow(bombs_gray)
+template_width, template_height = template_bomb.shape
+for x, y in peak_local_max(result, threshold_abs=0.4):
+    rect = plt.Rectangle((y, x), template_height, template_width, color='r', 
+                         fc='none')
+    plt.gca().add_patch(rect);
+                                </code>
+                            </pre>
+
+                            <div class="gallery-container">
+                                <img class="gallery-img" src="img/17-18_image_4.png">
+                            </div>
+
+                            <p>This is great! We isolated all the bob-ombs. But there's one problem -- we can't distinguish the colors of the bombs. The color of the bomb is essential, because misplacing a bomb by color causes the game to end. Let's try to implement this again in color.</p>
+
+                            <div class="section">Defusing in the Light</div>
+
+                            <p>
+                                Let's try this again with the colored image. Let's isolate the top left black bob-omb again, this time in color. Our goal now is to identify all the <b>black bob-ombs.</b>
+                            </p>
+
+                            <pre>
+                                <code class="language-python">
+# Show colored image
+imshow(bombs);
+
+# Show colored template black bomb
+template_bomb2 = bombs[135:198, 275:323]
+imshow(template_bomb2);
+                                </code>
+                            </pre>
+
+                            <div class="gallery-container">
+                                <img class="gallery-img" src="img/17-18_image_1.png">
+                                <img class="gallery-img" src="img/17-18_image_5.png">
+                            </div>
+
+                            <p>
+                                Now let's perform the same steps again, using match_template and peak_local_max to identify and isolate the most similar areas in the image.
+                            </p>
+
+                            <pre>
+                                <code class="language-python">
+result = match_template(bombs, template_bomb2)
+imshow(result, cmap='viridis');
+                                </code>
+                            </pre>
+
+                            <div class="gallery-container">
+                                <img class="gallery-img" src="img/17-18_image_6.png">
+                            </div>
+
+                            <p>Less bombs this time! Which is correct. Not all of them were black. But, uh-oh ---</p>
+
+                            <pre>
+                                <code class="language-python">
+imshow(bombs)
+template_width, template_height, template_channels = template_bomb2.shape
+for x, y in peak_local_max(result.reshape(514, 713), threshold_abs=0.4):
+    rect = plt.Rectangle((y, x), template_height, template_width, color='r', 
+                         fc='none')
+    plt.gca().add_patch(rect);
+                                </code>
+                            </pre>
+
+                            <div class="gallery-container">
+                                <img class="gallery-img" src="img/17-18_image_7.png">
+                            </div>
+
+                            <p>It seems that a stray red bob-omb has been caught by template matching. In this implementation, our program would lose the game immediately. This can obviously be adjusted by threshold_abs, but there is no guarantee that all cases will be accounted for as the game plays out. Eventually, our program would make a mistake.</p>
+                                
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,320 @@
+* {box-sizing: border-box}
+
+body {
+    font-family: "Bai Jamjuree", "Lato", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {display: none}
+
+strong {
+  color: orangered;
+}
+
+pre {
+  margin: 0;
+}
+
+code {
+  border: 0.5px solid gray; 
+  border-radius: 10px;
+}
+
+hr.dotted {border-top: 1px dotted #bbb}
+
+h2 {
+    font-size: 28px;
+    font-weight: 900;
+}
+
+h3 {font-size: 28px}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 15px;
+}
+
+td, th {
+  border: 1px solid #606060;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: rgb(210, 210, 210);
+}
+
+td {
+  background-color: white;
+}
+
+.session {
+    font-size: 20px;
+    padding-right: 10px;
+    color: gray;
+}
+
+.tablinks {font-family: "Bai Jamjuree", sans-serif}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 16px;
+    height: 60px;
+    /* max-width: 5%; */
+    background: rgb(30, 30, 30);
+    color: white;
+    top: 0;
+    z-index: 10;
+  }
+
+.subheader {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    font-size: 32px;
+    font-weight: 900;
+    height: 72px;
+    background: white;
+    color: black;
+    position: sticky;
+    top: 8px;
+    border-bottom: 1px dotted black;
+    z-index: 1;
+  }
+
+.section {
+    padding: 5px 16px;
+    background: white;
+    color: black;
+    font-weight: 800;
+    border-bottom: 1px dotted orangered;
+    font-size: 22px;
+}
+
+.body {
+    flex: 1;
+    display: flex;
+  }
+
+  .tab p {
+    margin-block-end: 0;
+    margin-block-start: 0;
+  }
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-image: radial-gradient(#bdbfe2 0.5px, #ffffff 0.5px);
+    background-size: 10px 10px;
+  }
+
+#container::-webkit-scrollbar {display: none}
+
+.blog-container {padding: 32px}
+
+.home-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  font-weight: 800;
+  font-family: 'Bai Jamjuree', 'Lato', sans-serif;
+  font-size: 28px;
+  background-color: black;
+  padding: 10px 20px;
+}
+
+
+.img-container {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.txt-container {
+    padding: 20px 80px;
+    text-align: justify;
+}
+
+.takeaway-container {
+  padding: 15px 30px;
+  background-color: #fff2a8;
+  color: rgb(83, 10, 0);
+  border-color: orangered;
+  margin: 30px 0px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    gap: 10px;
+}
+
+.gallery-img {
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.tab {
+    width: 230px;
+    background: #d1d1d1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+.tablinks > i {display: none}
+
+.tablinks > p > i {padding-right: 8px}
+
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 18px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+    border: 0.01px solid rgb(30, 30, 30);
+    border-top: none;
+    border-right: none;
+    box-sizing: border-box;
+}
+
+.tab button:hover{
+    background-color: #606060;
+    color: white;
+}
+
+.tab button.active {
+    background-color: orangered;
+    color: white;
+}
+
+.tabcontent {
+    float: left;
+    width: 100%;
+}
+
+.footer {
+    height: 30px;
+    background: rgb(30, 30, 30);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight:500;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  /* .hide {
+    display: none;
+  }
+  
+  .myDIV:hover + .hide {
+    display: block;
+    color: red;
+  } */
+
+.collapsible {
+    font-size: 28px;
+    font-weight: 900;
+    font-family: 'Bai Jamjuree', 'Lato', sans-serif;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+  }
+  
+.collapsible:hover {background-color: rgb(60, 60, 60)}
+  
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: orange;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background-image: linear-gradient(130deg, #ffbb00 25%, #fff2a8 25%, #fff2a8 50%, #ffbb00 50%, #ffbb00 75%, #fff2a8 75%, #fff2a8 100%);
+background-size: 52.22px 62.23px;
+  position:sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.progress-bar {
+  height: 8px;
+  background: orangered;
+  width: 0%;
+}
+
+@media screen and (max-width: 800px) {
+  .tab {
+    width: 50px; 
+    min-width:50px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 100vh;
+  }
+  .tab button {
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .tab p {display: none}
+  .tab i {display: block}
+  .header {font-size: 3vw}
+  .txt-container p, .txt-container ul, .txt-container ol, .txt-container table {font-size: 12px}
+  .blog-container {padding: 0}
+  .footer {position:relative}
+  code {font-size: 11px}
+}
+
+@media screen and (max-width: 1000px) {
+  h3, .session {font-size: 2.5vw;}
+}
